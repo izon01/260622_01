@@ -71,9 +71,20 @@ tailwind.config = {
   <div class="auth-card w-full max-w-md mx-4 my-8">
     <!-- Branding -->
     <div class="text-center mb-8">
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9KjqT9r4SAipD7VNtiHzoUKinwWdYXwhUb3qH0kOH9j4SCKE8lHK9xhTTYF76XU9o1AG3KydgqiDPcASlYAP0iRjo4haSD_d6CIqXi2dajxzLXvAMuiAXe4Ic_ctvfuuxcxxpUl0-q0Itv6ZUByakPE-mcZ0rXhY2fRu49VVIoAIGOC0PyxDfS51EykQmUV7aKLig_OsmUM-dg2mIqZG4bAFLoLpnIgNkoGT0Muu6Fxta6gYE_wL6kTNGqaH1QnSGWc4n4BPP7A4" alt="로고" class="h-12 mx-auto mb-4"/>
+      <svg class="h-16 mx-auto mb-4" viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="70" rx="8" fill="white" fill-opacity="0.12"/>
+        <rect x="4" y="4" width="38" height="38" rx="4" fill="#005BAC"/>
+        <text x="23" y="27" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="900" fill="white">경북</text>
+        <text x="23" y="38" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#88D0FF">GYEONGBUK</text>
+        <rect x="46" y="8" width="2" height="30" rx="1" fill="white" fill-opacity="0.3"/>
+        <text x="54" y="20" font-family="sans-serif" font-size="9" font-weight="700" fill="white">Gyeongbuk</text>
+        <text x="54" y="30" font-family="sans-serif" font-size="9" font-weight="700" fill="white">Youth Talent School</text>
+        <text x="54" y="42" font-family="sans-serif" font-size="11" font-weight="900" fill="#88D0FF">청년인재스쿨</text>
+        <circle cx="176" cy="14" r="10" fill="#00A76F" fill-opacity="0.8"/>
+        <text x="176" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="900" fill="white">GPC</text>
+      </svg>
       <h1 class="text-3xl font-bold text-white tracking-tight">경북 청년인재스쿨</h1>
-      <p class="text-white/60 text-sm mt-1">Gyeongbuk Youth Talent School Portal</p>
+      <p class="text-white/60 text-sm mt-1">9기 · AI기반 실무역량 강화 취업성과 프로그램</p>
     </div>
 
     <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
@@ -137,14 +148,6 @@ tailwind.config = {
           </button>
         </div>
 
-        <!-- Demo hint -->
-        <div class="mt-5 p-4 bg-surface-container-low rounded-xl border border-outline-variant text-xs text-on-surface-variant">
-          <p class="font-bold mb-2 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">info</span>테스트 계정</p>
-          <div class="grid grid-cols-2 gap-2">
-            <div><p class="font-bold text-primary mb-1">관리자</p><p>ID: <code class="bg-white px-1 rounded">admin</code></p><p>PW: <code class="bg-white px-1 rounded">1234</code></p></div>
-            <div><p class="font-bold text-secondary mb-1">참여자</p><p>ID: <code class="bg-white px-1 rounded">user</code></p><p>PW: <code class="bg-white px-1 rounded">1234</code></p></div>
-          </div>
-        </div>
       </div>
 
       <!-- ---- SIGNUP PANEL ---- -->
@@ -159,7 +162,7 @@ tailwind.config = {
               <label class="block text-sm font-semibold mb-1">기수 <span class="text-error">*</span></label>
               <select id="su-cohort" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low">
                 <option value="">선택</option>
-                <option>4기</option><option>5기</option><option>6기</option>
+                <option>7기</option><option>8기</option><option selected>9기</option>
               </select>
             </div>
           </div>
@@ -213,7 +216,7 @@ tailwind.config = {
         </div>
       </div>
     </div>
-    <p class="text-center text-white/40 text-xs mt-4">© 2024 Gyeongbuk Youth Talent School</p>
+    <p class="text-center text-white/40 text-xs mt-4">© 2026 경북 청년인재스쿨 9기 · Gyeongbuk Youth Talent School</p>
   </div>
 </div>
 
@@ -222,7 +225,14 @@ tailwind.config = {
   <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 h-16 z-50 flex items-center justify-between px-6 bg-white border-b border-outline-variant shadow-sm">
     <div class="flex items-center gap-3">
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9KjqT9r4SAipD7VNtiHzoUKinwWdYXwhUb3qH0kOH9j4SCKE8lHK9xhTTYF76XU9o1AG3KydgqiDPcASlYAP0iRjo4haSD_d6CIqXi2dajxzLXvAMuiAXe4Ic_ctvfuuxcxxpUl0-q0Itv6ZUByakPE-mcZ0rXhY2fRu49VVIoAIGOC0PyxDfS51EykQmUV7aKLig_OsmUM-dg2mIqZG4bAFLoLpnIgNkoGT0Muu6Fxta6gYE_wL6kTNGqaH1QnSGWc4n4BPP7A4" alt="로고" class="h-8"/>
+      <svg class="h-8" viewBox="0 0 160 36" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="32" height="32" rx="4" fill="#003f87"/>
+        <text x="16" y="14" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="900" fill="white">경북</text>
+        <text x="16" y="22" text-anchor="middle" font-family="sans-serif" font-size="4.5" fill="#88D0FF">GYEONGBUK</text>
+        <rect x="36" y="4" width="1.5" height="24" rx="1" fill="#c2c6d4"/>
+        <text x="42" y="14" font-family="sans-serif" font-size="7" font-weight="700" fill="#003f87">Gyeongbuk Youth</text>
+        <text x="42" y="26" font-family="sans-serif" font-size="9" font-weight="900" fill="#003f87">청년인재스쿨</text>
+      </svg>
       <span class="font-bold text-primary text-lg" id="site-title">경북 청년인재스쿨 관리자</span>
     </div>
     <div class="flex items-center gap-3">
@@ -269,8 +279,8 @@ tailwind.config = {
         <div class="bg-white border border-outline-variant rounded-xl p-5 flex flex-col gap-2 relative overflow-hidden hover:-translate-y-1 transition-transform card-shadow group">
           <div class="absolute -right-3 -top-3 opacity-5 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size:100px">groups</span></div>
           <p class="text-xs font-semibold text-on-surface-variant">전체 참가 인원</p>
-          <div class="flex items-baseline gap-1"><span class="text-4xl font-bold text-primary">128</span><span class="text-sm text-on-surface-variant">명</span></div>
-          <p class="text-xs text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">trending_up</span>전월 대비 +12%</p>
+          <div class="flex items-baseline gap-1"><span class="text-4xl font-bold text-primary">36</span><span class="text-sm text-on-surface-variant">명</span></div>
+          <p class="text-xs text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">school</span>9기 현재 진행 중</p>
         </div>
         <div class="bg-white border border-outline-variant rounded-xl p-5 flex flex-col gap-2 relative overflow-hidden hover:-translate-y-1 transition-transform card-shadow group">
           <div class="absolute -right-3 -top-3 opacity-5 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size:100px">calendar_month</span></div>
@@ -311,10 +321,12 @@ tailwind.config = {
                 <thead><tr class="bg-surface-container-low border-b border-outline-variant">
                   <th class="px-4 py-3 font-semibold">이름</th>
                   <th class="px-4 py-3 font-semibold hidden md:table-cell">연락처</th>
+                  <th class="px-4 py-3 font-semibold hidden lg:table-cell">소속</th>
                   <th class="px-4 py-3 font-semibold">팀/기수</th>
                   <th class="px-4 py-3 font-semibold">출석률</th>
                   <th class="px-4 py-3 font-semibold">과제</th>
                   <th class="px-4 py-3 font-semibold hidden lg:table-cell">최근 상담</th>
+                  <th class="px-4 py-3 font-semibold">상태</th>
                 </tr></thead>
                 <tbody id="ptable" class="divide-y divide-outline-variant/30"></tbody>
               </table>
@@ -390,11 +402,14 @@ tailwind.config = {
           <select onchange="renderPFull()" id="pteam-filter" class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-sm">
             <option value="">전체 팀</option><option>A팀</option><option>B팀</option><option>C팀</option>
           </select>
+          <select onchange="renderPFull()" id="pstatus-filter" class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-sm">
+            <option value="">전체 상태</option><option>진행 중</option><option>이탈 위험</option><option>수료</option><option>이탈</option>
+          </select>
         </div>
         <div class="overflow-x-auto">
           <table class="w-full text-left text-sm border-collapse">
             <thead><tr class="bg-surface-container-low border-b border-outline-variant">
-              <th class="px-4 py-3 font-semibold">이름</th><th class="px-4 py-3 font-semibold">연락처</th><th class="px-4 py-3 font-semibold">팀/기수</th><th class="px-4 py-3 font-semibold">출석률</th><th class="px-4 py-3 font-semibold">과제</th><th class="px-4 py-3 font-semibold">상태</th>
+              <th class="px-4 py-3 font-semibold">이름</th><th class="px-4 py-3 font-semibold">연락처</th><th class="px-4 py-3 font-semibold hidden md:table-cell">소속</th><th class="px-4 py-3 font-semibold">팀/기수</th><th class="px-4 py-3 font-semibold">출석률</th><th class="px-4 py-3 font-semibold">과제</th><th class="px-4 py-3 font-semibold">상태</th>
             </tr></thead>
             <tbody id="ptable-full" class="divide-y divide-outline-variant/30"></tbody>
           </table>
@@ -408,7 +423,7 @@ tailwind.config = {
       <div class="flex flex-wrap justify-between items-center mb-6 gap-3">
         <div>
           <h1 class="text-2xl font-bold">과제 관리 시스템</h1>
-          <p class="text-sm text-on-surface-variant mt-1">2024 경북 청년인재스쿨 1학기 교육과정</p>
+          <p class="text-sm text-on-surface-variant mt-1">2026 경북 청년인재스쿨 9기 교육과정</p>
         </div>
         <button onclick="showToast('엑셀 다운로드를 시작합니다.')" class="px-4 py-2 border border-primary text-primary font-bold rounded-lg text-sm flex items-center gap-2 hover:bg-surface-container-low">
           <span class="material-symbols-outlined text-[18px]">file_download</span>엑셀 추출
@@ -429,8 +444,8 @@ tailwind.config = {
         </div>
         <div class="bg-secondary-container border border-outline-variant rounded-xl p-5 card-shadow">
           <p class="text-xs text-on-secondary-container font-semibold uppercase">활동 학생</p>
-          <div class="flex items-center justify-between mt-1"><p class="text-4xl font-bold text-on-secondary-container">128</p><span class="material-symbols-outlined text-on-secondary-container">group</span></div>
-          <p class="text-xs text-on-secondary-container mt-2">최근 24h 접속</p>
+          <div class="flex items-center justify-between mt-1"><p class="text-4xl font-bold text-on-secondary-container">36</p><span class="material-symbols-outlined text-on-secondary-container">group</span></div>
+          <p class="text-xs text-on-secondary-container mt-2">9기 전체 인원</p>
         </div>
       </div>
 
@@ -635,13 +650,13 @@ tailwind.config = {
         <div class="md:col-span-2 bg-white border border-outline-variant rounded-xl p-5 card-shadow">
           <p class="text-xs text-on-surface-variant font-semibold flex items-center gap-1 mb-3"><span class="material-symbols-outlined text-primary text-[16px]">assignment_turned_in</span>나의 과제 현황</p>
           <div class="grid grid-cols-4 gap-3">
-            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">전체</p><p class="text-2xl font-bold text-primary">12</p></div>
-            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">제출 완료</p><p class="text-2xl font-bold text-secondary">8</p></div>
-            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">검토 중</p><p class="text-2xl font-bold text-tertiary">2</p></div>
-            <div class="p-3 bg-surface-container-low rounded-lg text-center border-2 border-primary-fixed"><p class="text-xs text-primary font-bold">미제출</p><p class="text-2xl font-bold text-error">2</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">전체</p><p class="text-2xl font-bold text-primary">6</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">제출 완료</p><p class="text-2xl font-bold text-secondary">4</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">검토 중</p><p class="text-2xl font-bold text-tertiary">1</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center border-2 border-primary-fixed"><p class="text-xs text-primary font-bold">미제출</p><p class="text-2xl font-bold text-error">1</p></div>
           </div>
           <div class="mt-3 p-3 bg-primary-fixed text-on-primary-fixed rounded-lg flex items-center justify-between text-sm">
-            <p>이번 주 마감 과제 <span class="font-bold underline">1건</span> 있습니다.</p>
+            <p>이번 주 마감 과제 <span class="font-bold underline">5주차: 취업 전략 로드맵 수립</span></p>
             <span class="material-symbols-outlined text-[18px]">chevron_right</span>
           </div>
         </div>
@@ -650,11 +665,15 @@ tailwind.config = {
           <div class="space-y-3">
             <div class="flex items-center gap-3 py-2 border-b border-surface-container-high">
               <div class="w-10 h-10 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">check_circle</span></div>
-              <div><p class="text-sm font-semibold">'자기소개서 첨삭 과제' 제출이 승인되었습니다.</p><p class="text-xs text-on-surface-variant">2시간 전</p></div>
+              <div><p class="text-sm font-semibold">'데이터 분석 기초 실습 보고서' 제출이 승인되었습니다.</p><p class="text-xs text-on-surface-variant">2시간 전</p></div>
+            </div>
+            <div class="flex items-center gap-3 py-2 border-b border-surface-container-high">
+              <div class="w-10 h-10 bg-error/10 text-error rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">assignment_late</span></div>
+              <div><p class="text-sm font-semibold">'취업 전략 로드맵 수립' 과제 마감이 2일 남았습니다.</p><p class="text-xs text-on-surface-variant">오늘</p></div>
             </div>
             <div class="flex items-center gap-3 py-2">
               <div class="w-10 h-10 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">notifications_active</span></div>
-              <div><p class="text-sm font-semibold">새로운 공지사항: '6월 현장 견학 일정 안내'가 등록되었습니다.</p><p class="text-xs text-on-surface-variant">어제</p></div>
+              <div><p class="text-sm font-semibold">새로운 공지사항: '[긴급] 6월 AI 실무 특강 시간 변경'이 등록되었습니다.</p><p class="text-xs text-on-surface-variant">어제</p></div>
             </div>
           </div>
         </div>
@@ -668,17 +687,17 @@ tailwind.config = {
           </div>
           <div class="bg-white border border-outline-variant p-5 rounded-xl card-shadow flex flex-wrap items-center justify-between gap-4">
             <div class="flex-1 min-w-48">
-              <div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded font-bold">10주차</span><span class="px-2 py-0.5 rounded-full text-[11px] bg-secondary/10 text-secondary font-semibold">승인 완료</span></div>
-              <p class="font-semibold text-sm">창업 아이디어 피칭 데크 수정본</p>
-              <p class="text-xs text-on-surface-variant mt-0.5">제출일: 2024.05.20 14:30</p>
+              <div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded font-bold">4주차</span><span class="px-2 py-0.5 rounded-full text-[11px] bg-secondary/10 text-secondary font-semibold">승인 완료</span></div>
+              <p class="font-semibold text-sm">데이터 분석 기초 실습 보고서</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">제출일: 2026.05.01 14:30</p>
             </div>
             <button onclick="showToast('수정 기능은 준비 중입니다.')" class="px-4 py-2 border border-primary text-primary font-bold rounded-lg text-sm hover:bg-primary-fixed">수정하기</button>
           </div>
           <div class="bg-primary/5 border-2 border-primary p-5 rounded-xl card-shadow flex flex-wrap items-center justify-between gap-4">
             <div class="flex-1 min-w-48">
-              <div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 bg-primary text-white text-[10px] rounded font-bold">11주차</span><span class="px-2 py-0.5 rounded-full text-[11px] bg-error/10 text-error font-semibold">제출 대기</span></div>
-              <p class="font-bold text-sm">마케팅 믹스(4P) 분석 보고서</p>
-              <p class="text-xs text-error font-semibold mt-0.5">마감 임박: D-1 (5월 26일)</p>
+              <div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 bg-primary text-white text-[10px] rounded font-bold">5주차</span><span class="px-2 py-0.5 rounded-full text-[11px] bg-error/10 text-error font-semibold">제출 대기</span></div>
+              <p class="font-bold text-sm">취업 전략 로드맵 수립</p>
+              <p class="text-xs text-error font-semibold mt-0.5">마감 임박: D-2 (5월 9일)</p>
             </div>
             <button onclick="openModal('modal-upload')" class="px-4 py-2 bg-primary text-white font-bold rounded-lg text-sm hover:opacity-90">과제 제출하기</button>
           </div>
@@ -697,9 +716,9 @@ tailwind.config = {
               <button onclick="navigate('notices')" class="material-symbols-outlined text-on-surface-variant hover:text-primary text-[20px]">more_horiz</button>
             </div>
             <ul class="space-y-3">
-              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-primary mb-0.5">2024.05.24</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">[긴급] 6월 전문가 멘토링 시간 변경</p></button></li>
-              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-on-surface-variant mb-0.5">2024.05.22</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">포트폴리오 경진대회 안내</p></button></li>
-              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-on-surface-variant mb-0.5">2024.05.18</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">여름방학 인턴십 연계 기업 업데이트</p></button></li>
+              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-primary mb-0.5">2026.06.20</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">[긴급] 6월 AI 실무 특강 시간 변경 안내</p></button></li>
+              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-on-surface-variant mb-0.5">2026.06.18</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">9기 포트폴리오 경진대회 참가 안내</p></button></li>
+              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-on-surface-variant mb-0.5">2026.06.15</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">경북 지역 우수 기업 인턴십 매칭 데이 안내</p></button></li>
             </ul>
           </div>
         </div>
@@ -710,7 +729,7 @@ tailwind.config = {
 
   <!-- FOOTER -->
   <footer class="ml-64 py-4 px-8 flex flex-wrap justify-between items-center gap-3 bg-white border-t border-outline-variant text-xs text-on-surface-variant" style="margin-left:256px">
-    <div class="flex items-center gap-4"><span class="font-bold text-primary">경북 청년인재스쿨</span><span>© 2024 All rights reserved.</span></div>
+    <div class="flex items-center gap-4"><span class="font-bold text-primary">경북 청년인재스쿨 9기</span><span>© 2026 경상북도 · GPC All rights reserved.</span></div>
     <div class="flex gap-4">
       <button onclick="showToast('개인정보처리방침')" class="hover:text-primary">개인정보처리방침</button>
       <button onclick="showToast('이용약관')" class="hover:text-primary">이용약관</button>
@@ -729,7 +748,7 @@ tailwind.config = {
     </div>
     <div class="p-6 space-y-5">
       <div><label class="block text-sm font-semibold mb-2">과제명</label>
-        <input disabled type="text" value="마케팅 믹스(4P) 분석 보고서" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm bg-surface-container-highest text-on-surface-variant"/></div>
+        <input disabled type="text" value="취업 전략 로드맵 수립 (5주차)" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm bg-surface-container-highest text-on-surface-variant"/></div>
       <div>
         <label class="block text-sm font-semibold mb-2">파일 업로드</label>
         <div id="up-drop" class="border-2 border-dashed border-primary bg-[#E8F1FA] rounded-xl p-10 text-center cursor-pointer hover:bg-primary-fixed transition-colors">
@@ -778,10 +797,12 @@ let tFilter = 'all';
 let currentNcat = '';
 
 const PARTICIPANTS = [
-  {id:1,name:'김철수',ini:'김철',contact:'010-1234-5678',team:'A팀',cohort:'4기',att:78,tasks:'12/15',td:12,tt:15,last:'2024.05.15',days:10,bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
-  {id:2,name:'이영희',ini:'이영',contact:'010-8765-4321',team:'B팀',cohort:'4기',att:95,tasks:'15/15',td:15,tt:15,last:'2024.04.10',days:35,bg:'bg-tertiary-fixed',fg:'text-on-tertiary-fixed-variant'},
-  {id:3,name:'박민준',ini:'박민',contact:'010-5555-4444',team:'A팀',cohort:'4기',att:88,tasks:'10/15',td:10,tt:15,last:'2024.05.20',days:5,bg:'bg-secondary-fixed',fg:'text-on-secondary-fixed-variant'},
-  {id:4,name:'최수진',ini:'최수',contact:'010-1111-2222',team:'C팀',cohort:'4기',att:100,tasks:'15/15',td:15,tt:15,last:'2024.05.22',days:3,bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
+  {id:1,name:'김철수',ini:'김철',contact:'010-1234-5678',team:'A팀',cohort:'9기',org:'경북대학교',att:78,tasks:'8/12',td:8,tt:12,last:'2026.06.10',days:12,status:'진행 중',bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
+  {id:2,name:'이영희',ini:'이영',contact:'010-8765-4321',team:'B팀',cohort:'9기',org:'안동대학교',att:95,tasks:'12/12',td:12,tt:12,last:'2026.05.18',days:35,status:'진행 중',bg:'bg-tertiary-fixed',fg:'text-on-tertiary-fixed-variant'},
+  {id:3,name:'박민준',ini:'박민',contact:'010-5555-4444',team:'A팀',cohort:'9기',org:'포항공과대학교',att:88,tasks:'9/12',td:9,tt:12,last:'2026.06.17',days:5,status:'진행 중',bg:'bg-secondary-fixed',fg:'text-on-secondary-fixed-variant'},
+  {id:4,name:'최수진',ini:'최수',contact:'010-1111-2222',team:'C팀',cohort:'9기',org:'영남대학교',att:100,tasks:'12/12',td:12,tt:12,last:'2026.06.20',days:2,status:'진행 중',bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
+  {id:5,name:'정도현',ini:'정도',contact:'010-3333-7777',team:'B팀',cohort:'9기',org:'경일대학교',att:62,tasks:'5/12',td:5,tt:12,last:'2026.05.30',days:23,status:'이탈 위험',bg:'bg-tertiary-fixed',fg:'text-on-tertiary-fixed-variant'},
+  {id:6,name:'한지민',ini:'한지',contact:'010-9999-1234',team:'C팀',cohort:'9기',org:'대구가톨릭대학교',att:92,tasks:'11/12',td:11,tt:12,last:'2026.06.19',days:3,status:'진행 중',bg:'bg-secondary-fixed',fg:'text-on-secondary-fixed-variant'},
 ];
 const MEMOS = {
   1:[{type:'대면 상담',date:'2024.05.15 14:20',txt:'출석률 저하 면담. 자격증 시험 준비로 결석이 잦아졌음. 시험 후 정상 출석 약속.',author:'홍길동 매니저',bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
@@ -791,21 +812,25 @@ const MEMOS = {
   4:[],
 };
 let TASKS = [
-  {id:1,week:'1주차',name:'지역 문제 해결 아이디어 기획안',cat:'창의적 사고',due:'2024-03-15',sub:124,tot:128,appr:120,rej:4,status:'closed'},
-  {id:2,week:'2주차',name:'데이터 분석 기초 실습 보고서',cat:'디지털 역량',due:'2024-03-22',sub:82,tot:128,appr:12,rej:0,status:'active'},
-  {id:3,week:'3주차',name:'현장 실습 일지 #1',cat:'산업 밀착형 실무',due:'진행중',sub:15,tot:128,appr:0,rej:0,status:'active'},
+  {id:1,week:'1주차',name:'AI 기반 직무역량 자가진단 보고서',cat:'AI 실무역량',due:'2026-04-11',sub:34,tot:36,appr:32,rej:2,status:'closed'},
+  {id:2,week:'2주차',name:'지역 문제 해결 아이디어 기획안',cat:'창의적 사고',due:'2026-04-18',sub:34,tot:36,appr:30,rej:1,status:'closed'},
+  {id:3,week:'3주차',name:'ChatGPT 활용 업무 자동화 실습',cat:'AI 도구 활용',due:'2026-04-25',sub:33,tot:36,appr:28,rej:0,status:'closed'},
+  {id:4,week:'4주차',name:'데이터 분석 기초 실습 보고서',cat:'디지털 역량',due:'2026-05-02',sub:31,tot:36,appr:10,rej:0,status:'active'},
+  {id:5,week:'5주차',name:'취업 전략 로드맵 수립',cat:'취업 역량',due:'2026-05-09',sub:8,tot:36,appr:0,rej:0,status:'active'},
+  {id:6,week:'6주차',name:'현장 실습 일지 #1',cat:'산업 밀착형 실무',due:'2026-05-16',sub:0,tot:36,appr:0,rej:0,status:'active'},
 ];
 let SUBS = [
   {id:1,file:'김민수_지역문제기획_ver2.pdf',submitter:'김민수',team:'A반',date:'2024-03-23 14:20',size:'2.4MB'},
   {id:2,file:'이영희_중간기획안_수정본.docx',submitter:'이영희',team:'B반',date:'2024-03-23 15:45',size:'1.1MB'},
 ];
 let NOTICES = [
-  {id:'p1',pin:true,imp:true,title:'2024년 경북 청년 인재양성학교 동계 오리엔테이션 일정 안내',date:'2024.11.24',views:1245,cat:'',att:true},
-  {id:'p2',pin:true,imp:true,title:'필수 개인정보 이용 동의서 제출 (미제출 시 수당 지급 불가)',date:'2024.11.22',views:3102,cat:'',att:false},
-  {id:1,pin:false,imp:false,title:'12월 청년 네트워킹 데이 Dream Connect 참가자 모집',date:'2024.11.23',views:452,cat:'EVENT',isNew:true},
-  {id:2,pin:false,imp:false,title:'시스템 점검에 따른 포털 접속 일시 중단 안내',date:'2024.11.23',views:89,cat:'ADMIN'},
-  {id:3,pin:false,imp:false,title:'경북 지역 우수 기업 인턴십 매칭 데이 현장 스케치',date:'2024.11.20',views:672,cat:'CAREER',att:true},
-  {id:4,pin:false,imp:false,title:'2학기 성적 우수 장학금 수혜 대상자 명단 공고',date:'2024.11.18',views:2143,cat:'SCHOLARSHIP'},
+  {id:'p1',pin:true,imp:true,title:'[필독] 9기 오리엔테이션 및 교육 일정 안내',date:'2026.04.01',views:1876,cat:'',att:true},
+  {id:'p2',pin:true,imp:true,title:'필수 개인정보 이용 동의서 제출 (미제출 시 수당 지급 불가)',date:'2026.04.02',views:3421,cat:'',att:false},
+  {id:1,pin:false,imp:false,title:'[긴급] 6월 AI 실무 특강 시간 변경 안내',date:'2026.06.20',views:312,cat:'ADMIN',isNew:true},
+  {id:2,pin:false,imp:false,title:'9기 포트폴리오 경진대회 참가 신청 안내',date:'2026.06.18',views:587,cat:'EVENT',att:true},
+  {id:3,pin:false,imp:false,title:'경북 지역 우수 기업 인턴십 매칭 데이 안내',date:'2026.06.15',views:743,cat:'CAREER',att:true},
+  {id:4,pin:false,imp:false,title:'2026년 상반기 성적 우수 장학금 수혜 대상자 공고',date:'2026.06.10',views:2341,cat:'SCHOLARSHIP'},
+  {id:5,pin:false,imp:false,title:'AI 역량 강화 특별 세미나 참가자 모집',date:'2026.06.05',views:429,cat:'EVENT'},
 ];
 
 // ─── TOAST ───────────────────────────────────────────────
@@ -986,13 +1011,16 @@ function renderPTable(){
   if(!tb)return;
   tb.innerHTML=list.map(p=>{
     const ac=p.att<80,cc=p.days>7;
+    const statusCls=p.status==='이탈 위험'?'bg-error/10 text-error':p.status==='수료'?'bg-secondary/10 text-secondary':'bg-primary/10 text-primary';
     return`<tr onclick="selectP(${p.id})" class="hover:bg-surface-container cursor-pointer border-l-4 border-l-transparent transition-colors ${selParticipant===p.id?'active-row':''}">
       <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full ${p.bg} ${p.fg} flex items-center justify-center text-xs font-bold shrink-0">${p.ini}</div><span class="text-sm font-semibold">${p.name}</span></div></td>
       <td class="px-4 py-3 text-sm hidden md:table-cell">${p.contact}</td>
+      <td class="px-4 py-3 text-xs hidden lg:table-cell text-on-surface-variant">${p.org||'-'}</td>
       <td class="px-4 py-3 text-sm">${p.team}/${p.cohort}</td>
       <td class="px-4 py-3"><span class="${ac?'text-error':'text-primary'} font-bold text-sm">${p.att}%</span></td>
       <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-secondary-container/20 text-on-secondary-container text-xs font-bold">${p.tasks}</span></td>
       <td class="px-4 py-3 text-xs hidden lg:table-cell ${cc?'text-error font-bold':'text-on-surface-variant'}">${p.last}${cc?` <br/>(${p.days}일 경과)`:''}</td>
+      <td class="px-4 py-3"><span class="px-2 py-1 rounded-full text-xs font-bold ${statusCls}">${p.status||'진행 중'}</span></td>
     </tr>`;
   }).join('');
   document.getElementById('p-count-text').textContent=`전체 ${list.length}명`;
@@ -1046,18 +1074,22 @@ function saveMemo(){
 function renderPFull(){
   const search=(document.getElementById('psearch')?.value||'').toLowerCase();
   const team=document.getElementById('pteam-filter')?.value||'';
-  let list=PARTICIPANTS.filter(p=>(!team||p.team===team)&&(!search||p.name.includes(search)||p.contact.includes(search)));
+  const status=document.getElementById('pstatus-filter')?.value||'';
+  let list=PARTICIPANTS.filter(p=>(!team||p.team===team)&&(!status||p.status===status)&&(!search||p.name.includes(search)||p.contact.includes(search)||(p.org||'').includes(search)));
   const tb=document.getElementById('ptable-full');
   if(!tb)return;
-  tb.innerHTML=list.map(p=>`
-    <tr class="hover:bg-surface-container cursor-pointer transition-colors">
+  tb.innerHTML=list.map(p=>{
+    const sc=p.status==='이탈 위험'?'bg-error/10 text-error':p.status==='수료'?'bg-secondary/10 text-secondary':'bg-primary/10 text-primary';
+    return`<tr class="hover:bg-surface-container cursor-pointer transition-colors">
       <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full ${p.bg} ${p.fg} flex items-center justify-center text-xs font-bold shrink-0">${p.ini}</div><span class="text-sm font-semibold">${p.name}</span></div></td>
       <td class="px-4 py-3 text-sm">${p.contact}</td>
+      <td class="px-4 py-3 text-xs text-on-surface-variant hidden md:table-cell">${p.org||'-'}</td>
       <td class="px-4 py-3 text-sm">${p.team}/${p.cohort}</td>
       <td class="px-4 py-3 text-sm font-bold ${p.att<80?'text-error':'text-primary'}">${p.att}%</td>
       <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-secondary-container/20 text-on-secondary-container text-xs font-bold">${p.tasks}</span></td>
-      <td class="px-4 py-3"><span class="px-2 py-1 rounded-full text-xs font-bold bg-secondary/10 text-secondary">진행 중</span></td>
-    </tr>`).join('');
+      <td class="px-4 py-3"><span class="px-2 py-1 rounded-full text-xs font-bold ${sc}">${p.status||'진행 중'}</span></td>
+    </tr>`;
+  }).join('');
   document.getElementById('pfull-count').textContent=`전체 ${list.length}명`;
 }
 
