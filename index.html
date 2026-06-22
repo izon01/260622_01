@@ -7,1336 +7,1247 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<script>
 tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary-fixed": "#d7e2ff","on-secondary-fixed-variant": "#005233","tertiary": "#3a434a","background": "#f8f9fa","secondary-container": "#85f5ba","on-secondary-container": "#007149","surface-variant": "#e1e3e4","on-primary-fixed-variant": "#004491","surface-container-low": "#f3f4f5","error-container": "#ffdad6","on-surface-variant": "#424752","on-background": "#191c1d","tertiary-container": "#515a61","outline": "#727784","surface-container-highest": "#e1e3e4","secondary-fixed-dim": "#6bdba2","outline-variant": "#c2c6d4","on-primary-container": "#bbd0ff","surface-dim": "#d9dadb","on-primary": "#ffffff","on-error-container": "#93000a","primary-fixed-dim": "#acc7ff","inverse-on-surface": "#f0f1f2","inverse-primary": "#acc7ff","surface-container": "#edeeef","surface": "#f8f9fa","tertiary-fixed-dim": "#bec8d0","on-primary-fixed": "#001a40","on-surface": "#191c1d","on-tertiary-fixed": "#141d23","on-secondary-fixed": "#002112","surface-bright": "#f8f9fa","error": "#ba1a1a","on-tertiary-container": "#c8d1da","tertiary-fixed": "#dbe4ec","on-secondary": "#ffffff","surface-container-lowest": "#ffffff","secondary": "#006c45","surface-tint": "#115cb9","secondary-fixed": "#88f8bd","primary": "#003f87","surface-container-high": "#e7e8e9","on-tertiary": "#ffffff","on-tertiary-fixed-variant": "#3f484f","primary-container": "#0056b3","inverse-surface": "#2e3132","on-error": "#ffffff"
-      },
-      borderRadius: {"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
-      spacing: {"sm":"16px","xs":"8px","lg":"40px","gutter":"24px","md":"24px","base":"4px","xl":"64px","container-max":"1280px"},
-      fontFamily: {"headline-lg":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"headline-xl":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"label-lg":["Hanken Grotesk"]},
-      fontSize: {"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}]}
-    }
-  }
+  darkMode:"class",
+  theme:{extend:{
+    colors:{"primary-fixed":"#d7e2ff","on-secondary-fixed-variant":"#005233","tertiary":"#3a434a","background":"#f8f9fa","secondary-container":"#85f5ba","on-secondary-container":"#007149","surface-variant":"#e1e3e4","on-primary-fixed-variant":"#004491","surface-container-low":"#f3f4f5","error-container":"#ffdad6","on-surface-variant":"#424752","on-background":"#191c1d","tertiary-container":"#515a61","outline":"#727784","surface-container-highest":"#e1e3e4","secondary-fixed-dim":"#6bdba2","outline-variant":"#c2c6d4","on-primary-container":"#bbd0ff","surface-dim":"#d9dadb","on-primary":"#ffffff","on-error-container":"#93000a","primary-fixed-dim":"#acc7ff","inverse-on-surface":"#f0f1f2","inverse-primary":"#acc7ff","surface-container":"#edeeef","surface":"#f8f9fa","tertiary-fixed-dim":"#bec8d0","on-primary-fixed":"#001a40","on-surface":"#191c1d","on-tertiary-fixed":"#141d23","on-secondary-fixed":"#002112","surface-bright":"#f8f9fa","error":"#ba1a1a","on-tertiary-container":"#c8d1da","tertiary-fixed":"#dbe4ec","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","secondary":"#006c45","surface-tint":"#115cb9","secondary-fixed":"#88f8bd","primary":"#003f87","surface-container-high":"#e7e8e9","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#3f484f","primary-container":"#0056b3","inverse-surface":"#2e3132","on-error":"#ffffff"},
+    borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+    spacing:{"sm":"16px","xs":"8px","lg":"40px","gutter":"24px","md":"24px","base":"4px","xl":"64px","container-max":"1280px"},
+    fontFamily:{"headline-lg":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"headline-xl":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"label-lg":["Hanken Grotesk"]},
+    fontSize:{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}]}
+  }}
 }
 </script>
 <style>
-  body { font-family: 'Hanken Grotesk', sans-serif; background-color: #f8f9fa; }
-  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; display: inline-block; }
-  .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-  .custom-scrollbar::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
-  .active-row { background-color: #f0f7ff !important; border-left: 4px solid #0056B3 !important; }
-  .drag-zone-active { border-color: #0056B3 !important; background-color: #E8F1FA !important; }
-  .notice-row:hover { background-color: #F8F9FA; transition: all 0.2s ease; }
-  .page { display: none; }
-  .page.active { display: block; }
-  .nav-item.active { background-color: #0056b3; color: #bbd0ff; font-weight: 700; }
-  .nav-item.active span { color: #bbd0ff; }
-  .card-shadow { box-shadow: 0px 4px 12px rgba(0,0,0,0.05); }
-  .toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s ease; }
-  .toast.show { transform: translateY(0); opacity: 1; }
-  #login-screen { position: fixed; inset: 0; z-index: 200; background: linear-gradient(135deg, #003f87 0%, #0056b3 50%, #006c45 100%); display: flex; align-items: center; justify-content: center; }
-  #login-screen.hidden { display: none; }
-  .login-input-group { position: relative; }
-  .login-input-group input { transition: border-color 0.2s, box-shadow 0.2s; }
-  .login-input-group input:focus { border-color: #003f87; box-shadow: 0 0 0 3px rgba(0,63,135,0.15); outline: none; }
-  .login-card { animation: slideUp 0.4s ease; }
-  @keyframes slideUp { from { opacity:0; transform: translateY(24px); } to { opacity:1; transform: translateY(0); } }
-  .login-tab.active { background: #003f87; color: #fff; }
-  .login-tab { transition: all 0.2s; }
-  .portal-bg-pattern { background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%); }
+  *{box-sizing:border-box}
+  body{font-family:'Hanken Grotesk',sans-serif;background:#f8f9fa;margin:0;padding:0}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;display:inline-block}
+  .cscroll::-webkit-scrollbar{width:5px}
+  .cscroll::-webkit-scrollbar-track{background:transparent}
+  .cscroll::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:10px}
+  .active-row{background:#f0f7ff!important;border-left:3px solid #0056B3!important}
+  .drag-active{border-color:#0056B3!important;background:#E8F1FA!important}
+  .page{display:none}
+  .page.active{display:block}
+  .nav-active{background:#0056b3!important;color:#bbd0ff!important;font-weight:700}
+  .nav-active span{color:#bbd0ff!important}
+  .card-shadow{box-shadow:0 4px 12px rgba(0,0,0,.06)}
+  /* Toast */
+  #toast{position:fixed;bottom:24px;right:24px;z-index:9999;transform:translateY(80px);opacity:0;transition:all .3s ease;pointer-events:none}
+  #toast.show{transform:translateY(0);opacity:1}
+  /* Login */
+  #auth-screen{position:fixed;inset:0;z-index:500;background:linear-gradient(135deg,#003f87 0%,#0056b3 55%,#005c3a 100%);display:flex;align-items:center;justify-content:center;overflow-y:auto}
+  #auth-screen.gone{display:none}
+  .auth-card{animation:slideUp .35s ease both}
+  @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .auth-tab{transition:background .2s,color .2s}
+  .auth-tab.on{background:#003f87;color:#fff}
+  .auth-tab.off{background:transparent;color:#424752}
+  /* Layout */
+  #app-shell{display:none}
+  #app-shell.show{display:flex;flex-direction:column;min-height:100vh}
+  .sidebar{position:fixed;left:0;top:64px;width:256px;height:calc(100vh - 64px);overflow-y:auto;z-index:40}
+  .main-area{margin-left:256px;margin-top:64px;min-height:calc(100vh - 64px);overflow-y:auto}
+  @media(max-width:768px){.sidebar{display:none}.main-area{margin-left:0}}
+  /* input focus */
+  input:focus,select:focus,textarea:focus{outline:2px solid #003f87;outline-offset:0}
+  .modal-wrap{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:16px}
+  .modal-wrap.open{display:flex}
 </style>
 </head>
 <body class="text-on-surface">
 
-<!-- ==================== LOGIN SCREEN ==================== -->
-<div id="login-screen" class="portal-bg-pattern">
-  <div class="login-card w-full max-w-md mx-4">
-    <!-- Logo & Title -->
-    <div class="text-center mb-xl">
-      <img alt="로고" class="h-12 mx-auto mb-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9KjqT9r4SAipD7VNtiHzoUKinwWdYXwhUb3qH0kOH9j4SCKE8lHK9xhTTYF76XU9o1AG3KydgqiDPcASlYAP0iRjo4haSD_d6CIqXi2dajxzLXvAMuiAXe4Ic_ctvfuuxcxxpUl0-q0Itv6ZUByakPE-mcZ0rXhY2fRu49VVIoAIGOC0PyxDfS51EykQmUV7aKLig_OsmUM-dg2mIqZG4bAFLoLpnIgNkoGT0Muu6Fxta6gYE_wL6kTNGqaH1QnSGWc4n4BPP7A4"/>
-      <h1 class="text-headline-lg font-headline-lg text-white">경북 청년인재스쿨</h1>
-      <p class="text-label-lg text-white/60 mt-xs">Gyeongbuk Youth Talent School Portal</p>
+<!-- ======= TOAST ======= -->
+<div id="toast">
+  <div class="bg-on-surface text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-sm font-semibold" id="toast-inner">
+    <span class="material-symbols-outlined text-secondary-fixed text-[18px]">check_circle</span>
+    <span id="toast-msg"></span>
+  </div>
+</div>
+
+<!-- ======= AUTH SCREEN (Login + Signup) ======= -->
+<div id="auth-screen">
+  <div class="auth-card w-full max-w-md mx-4 my-8">
+    <!-- Branding -->
+    <div class="text-center mb-8">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9KjqT9r4SAipD7VNtiHzoUKinwWdYXwhUb3qH0kOH9j4SCKE8lHK9xhTTYF76XU9o1AG3KydgqiDPcASlYAP0iRjo4haSD_d6CIqXi2dajxzLXvAMuiAXe4Ic_ctvfuuxcxxpUl0-q0Itv6ZUByakPE-mcZ0rXhY2fRu49VVIoAIGOC0PyxDfS51EykQmUV7aKLig_OsmUM-dg2mIqZG4bAFLoLpnIgNkoGT0Muu6Fxta6gYE_wL6kTNGqaH1QnSGWc4n4BPP7A4" alt="로고" class="h-12 mx-auto mb-4"/>
+      <h1 class="text-3xl font-bold text-white tracking-tight">경북 청년인재스쿨</h1>
+      <p class="text-white/60 text-sm mt-1">Gyeongbuk Youth Talent School Portal</p>
     </div>
 
-    <!-- Card -->
     <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-      <!-- Role Tabs -->
-      <div class="flex border-b border-outline-variant">
-        <button id="tab-admin" onclick="switchLoginTab('admin')" class="login-tab active flex-1 py-md text-label-lg font-bold text-center rounded-none">
-          <span class="material-symbols-outlined text-[18px] mr-xs align-middle">manage_accounts</span>관리자 로그인
+      <!-- Top tabs: 로그인 / 회원가입 -->
+      <div class="flex border-b border-outline-variant" id="auth-mode-tabs">
+        <button onclick="switchAuthMode('login')" id="mode-login" class="auth-tab on flex-1 py-4 text-sm font-bold flex items-center justify-center gap-1">
+          <span class="material-symbols-outlined text-[18px]">login</span>로그인
         </button>
-        <button id="tab-user" onclick="switchLoginTab('user')" class="login-tab flex-1 py-md text-label-lg font-bold text-center text-on-surface-variant rounded-none">
-          <span class="material-symbols-outlined text-[18px] mr-xs align-middle">person</span>참여자 로그인
+        <button onclick="switchAuthMode('signup')" id="mode-signup" class="auth-tab off flex-1 py-4 text-sm font-bold flex items-center justify-center gap-1">
+          <span class="material-symbols-outlined text-[18px]">person_add</span>회원가입
         </button>
       </div>
 
-      <div class="p-xl">
-        <!-- Login Form -->
-        <form onsubmit="handleLogin(event)" class="space-y-md">
-          <div class="login-input-group space-y-xs">
-            <label class="font-label-lg text-on-surface block">아이디</label>
+      <!-- ---- LOGIN PANEL ---- -->
+      <div id="panel-login" class="p-8">
+        <!-- Role tabs -->
+        <div class="flex rounded-xl overflow-hidden border border-outline-variant mb-6">
+          <button onclick="switchLoginRole('admin')" id="role-admin" class="auth-tab on flex-1 py-2 text-sm font-bold flex items-center justify-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">manage_accounts</span>관리자
+          </button>
+          <button onclick="switchLoginRole('user')" id="role-user" class="auth-tab off flex-1 py-2 text-sm font-bold flex items-center justify-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">person</span>참여자
+          </button>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold text-on-surface mb-1">아이디</label>
             <div class="relative">
-              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">person</span>
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">person</span>
               <input id="login-id" type="text" placeholder="아이디를 입력하세요" autocomplete="username"
-                class="w-full border border-outline-variant rounded-lg py-sm pl-10 pr-sm text-body-md bg-surface-container-low"/>
+                class="w-full border border-outline-variant rounded-xl py-3 pl-10 pr-4 text-sm bg-surface-container-low"/>
             </div>
           </div>
-          <div class="login-input-group space-y-xs">
-            <label class="font-label-lg text-on-surface block">비밀번호</label>
+          <div>
+            <label class="block text-sm font-semibold text-on-surface mb-1">비밀번호</label>
             <div class="relative">
-              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">lock</span>
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
               <input id="login-pw" type="password" placeholder="비밀번호를 입력하세요" autocomplete="current-password"
-                class="w-full border border-outline-variant rounded-lg py-sm pl-10 pr-10 text-body-md bg-surface-container-low"/>
-              <button type="button" onclick="togglePw()" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors">
-                <span class="material-symbols-outlined" id="pw-eye">visibility_off</span>
+                class="w-full border border-outline-variant rounded-xl py-3 pl-10 pr-10 text-sm bg-surface-container-low"/>
+              <button type="button" onclick="togglePw('login-pw','eye-login')" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary">
+                <span class="material-symbols-outlined text-[20px]" id="eye-login">visibility_off</span>
               </button>
             </div>
           </div>
 
-          <!-- Error message -->
-          <p id="login-error" class="text-error text-label-sm hidden flex items-center gap-xs">
-            <span class="material-symbols-outlined text-[16px]">error</span>
-            <span id="login-error-msg"></span>
-          </p>
-
-          <div class="flex items-center justify-between">
-            <label class="flex items-center gap-xs cursor-pointer">
-              <input type="checkbox" id="remember-me" class="w-4 h-4 text-primary rounded border-outline-variant"/>
-              <span class="text-label-sm text-on-surface-variant">로그인 상태 유지</span>
-            </label>
-            <button type="button" onclick="showToastOnLogin('비밀번호 찾기 기능은 준비 중입니다.')" class="text-label-sm text-primary hover:underline">비밀번호 찾기</button>
+          <div id="login-err" class="hidden text-error text-xs font-semibold flex items-center gap-1 bg-error-container px-3 py-2 rounded-lg">
+            <span class="material-symbols-outlined text-[14px]">error</span><span id="login-err-msg"></span>
           </div>
 
-          <button type="submit" id="login-btn" class="w-full py-sm bg-primary text-on-primary font-bold rounded-xl text-label-lg hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-xs">
-            <span class="material-symbols-outlined text-[20px]">login</span>
-            <span>로그인</span>
+          <div class="flex items-center justify-between">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-primary rounded"/><span class="text-xs text-on-surface-variant">로그인 상태 유지</span>
+            </label>
+            <button type="button" onclick="showToast('비밀번호 찾기는 관리자에게 문의하세요.')" class="text-xs text-primary hover:underline">비밀번호 찾기</button>
+          </div>
+
+          <button type="button" onclick="doLogin()" id="login-btn"
+            class="w-full py-3 bg-primary text-white font-bold rounded-xl text-sm hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[20px]">login</span><span>로그인</span>
           </button>
-        </form>
+        </div>
 
         <!-- Demo hint -->
-        <div class="mt-lg p-sm bg-surface-container-low rounded-xl border border-outline-variant">
-          <p class="text-label-sm text-on-surface-variant font-bold mb-xs flex items-center gap-xs"><span class="material-symbols-outlined text-[14px]">info</span>테스트 계정</p>
-          <div class="grid grid-cols-2 gap-xs text-label-sm text-on-surface-variant">
-            <div class="space-y-1">
-              <p class="font-bold text-primary">관리자</p>
-              <p>ID: <span class="font-mono bg-white px-1 rounded">admin</span></p>
-              <p>PW: <span class="font-mono bg-white px-1 rounded">1234</span></p>
-            </div>
-            <div class="space-y-1">
-              <p class="font-bold text-secondary">참여자</p>
-              <p>ID: <span class="font-mono bg-white px-1 rounded">user</span></p>
-              <p>PW: <span class="font-mono bg-white px-1 rounded">1234</span></p>
-            </div>
+        <div class="mt-5 p-4 bg-surface-container-low rounded-xl border border-outline-variant text-xs text-on-surface-variant">
+          <p class="font-bold mb-2 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">info</span>테스트 계정</p>
+          <div class="grid grid-cols-2 gap-2">
+            <div><p class="font-bold text-primary mb-1">관리자</p><p>ID: <code class="bg-white px-1 rounded">admin</code></p><p>PW: <code class="bg-white px-1 rounded">1234</code></p></div>
+            <div><p class="font-bold text-secondary mb-1">참여자</p><p>ID: <code class="bg-white px-1 rounded">user</code></p><p>PW: <code class="bg-white px-1 rounded">1234</code></p></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <p class="text-center text-white/40 text-label-sm mt-md">© 2024 Gyeongbuk Youth Talent School. All rights reserved.</p>
-  </div>
-</div>
+      <!-- ---- SIGNUP PANEL ---- -->
+      <div id="panel-signup" class="p-8 hidden">
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-semibold mb-1">이름 <span class="text-error">*</span></label>
+              <input id="su-name" type="text" placeholder="홍길동" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low"/>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">기수 <span class="text-error">*</span></label>
+              <select id="su-cohort" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low">
+                <option value="">선택</option>
+                <option>4기</option><option>5기</option><option>6기</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-semibold mb-1">팀 <span class="text-error">*</span></label>
+              <select id="su-team" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low">
+                <option value="">선택</option>
+                <option>A팀</option><option>B팀</option><option>C팀</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">연락처 <span class="text-error">*</span></label>
+              <input id="su-phone" type="tel" placeholder="010-0000-0000" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">아이디 <span class="text-error">*</span></label>
+            <input id="su-id" type="text" placeholder="영문+숫자 4~20자" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low"/>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">비밀번호 <span class="text-error">*</span></label>
+            <div class="relative">
+              <input id="su-pw" type="password" placeholder="8자 이상 입력" class="w-full border border-outline-variant rounded-xl py-3 pl-4 pr-10 text-sm bg-surface-container-low"/>
+              <button type="button" onclick="togglePw('su-pw','eye-su')" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary">
+                <span class="material-symbols-outlined text-[20px]" id="eye-su">visibility_off</span>
+              </button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">비밀번호 확인 <span class="text-error">*</span></label>
+            <input id="su-pw2" type="password" placeholder="비밀번호 재입력" class="w-full border border-outline-variant rounded-xl py-3 px-4 text-sm bg-surface-container-low"/>
+          </div>
 
-<!-- Toast Notification -->
-<div class="toast" id="toast">
-  <div class="bg-on-surface text-inverse-on-surface px-md py-sm rounded-xl shadow-xl flex items-center gap-sm" id="toast-content">
-    <span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
-    <span id="toast-msg" class="font-label-lg"></span>
-  </div>
-</div>
+          <div id="signup-err" class="hidden text-error text-xs font-semibold flex items-center gap-1 bg-error-container px-3 py-2 rounded-lg">
+            <span class="material-symbols-outlined text-[14px]">error</span><span id="signup-err-msg"></span>
+          </div>
 
-<!-- Upload Modal -->
-<div class="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm hidden items-center justify-center p-sm" id="upload-modal" style="display:none;">
-  <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden">
-    <div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
-      <h3 class="font-headline-md text-headline-md">과제 제출하기</h3>
-      <button class="p-1 hover:bg-surface-variant rounded-full" onclick="closeModal('upload-modal')"><span class="material-symbols-outlined text-on-surface-variant">close</span></button>
-    </div>
-    <div class="p-md space-y-md">
-      <div>
-        <label class="block font-label-lg text-label-lg mb-xs">과제명</label>
-        <input class="w-full bg-surface-container-highest border border-outline-variant rounded-lg p-2 text-on-surface-variant text-label-lg" disabled type="text" value="마케팅 믹스(4P) 분석 보고서"/>
-      </div>
-      <div>
-        <label class="block font-label-lg text-label-lg mb-xs">파일 업로드</label>
-        <div class="border-2 border-dashed border-primary bg-[#E8F1FA] rounded-xl p-xl text-center cursor-pointer hover:bg-primary-fixed transition-colors" id="modal-dropzone">
-          <span class="material-symbols-outlined text-primary" style="font-size:40px">cloud_upload</span>
-          <p class="font-body-md text-primary font-bold mt-2">파일을 드래그하거나 클릭하여 선택하세요</p>
-          <p class="font-label-sm text-on-surface-variant mt-1">PDF, DOCX, ZIP (최대 50MB)</p>
-          <input class="hidden" id="modal-file-input" type="file" multiple/>
+          <div class="flex items-start gap-2">
+            <input type="checkbox" id="su-agree" class="w-4 h-4 mt-0.5 accent-primary rounded"/>
+            <label for="su-agree" class="text-xs text-on-surface-variant leading-relaxed">
+              <button type="button" onclick="showToast('개인정보 처리방침 확인')" class="text-primary underline">개인정보 처리방침</button> 및
+              <button type="button" onclick="showToast('이용약관 확인')" class="text-primary underline">이용약관</button>에 동의합니다.
+            </label>
+          </div>
+
+          <button type="button" onclick="doSignup()"
+            class="w-full py-3 bg-primary text-white font-bold rounded-xl text-sm hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[20px]">person_add</span><span>회원가입 완료</span>
+          </button>
         </div>
-        <div id="modal-file-list" class="mt-sm space-y-xs"></div>
       </div>
-      <div>
-        <label class="block font-label-lg text-label-lg mb-xs">참고 링크 (선택사항)</label>
-        <input class="w-full border border-outline-variant rounded-lg p-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-label-lg" placeholder="https://..." type="url"/>
-      </div>
-      <button class="w-full py-sm bg-primary text-on-primary font-bold rounded-xl hover:opacity-90 transition-opacity" onclick="submitTask()">제출 완료하기</button>
     </div>
+    <p class="text-center text-white/40 text-xs mt-4">© 2024 Gyeongbuk Youth Talent School</p>
   </div>
 </div>
 
-<!-- New Task Modal (Admin) -->
-<div class="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm hidden items-center justify-center p-sm" id="new-task-modal" style="display:none;">
-  <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden">
-    <div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
-      <h3 class="font-headline-md text-headline-md">신규 과제 등록</h3>
-      <button class="p-1 hover:bg-surface-variant rounded-full" onclick="closeModal('new-task-modal')"><span class="material-symbols-outlined text-on-surface-variant">close</span></button>
+<!-- ======= APP SHELL ======= -->
+<div id="app-shell">
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 h-16 z-50 flex items-center justify-between px-6 bg-white border-b border-outline-variant shadow-sm">
+    <div class="flex items-center gap-3">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9KjqT9r4SAipD7VNtiHzoUKinwWdYXwhUb3qH0kOH9j4SCKE8lHK9xhTTYF76XU9o1AG3KydgqiDPcASlYAP0iRjo4haSD_d6CIqXi2dajxzLXvAMuiAXe4Ic_ctvfuuxcxxpUl0-q0Itv6ZUByakPE-mcZ0rXhY2fRu49VVIoAIGOC0PyxDfS51EykQmUV7aKLig_OsmUM-dg2mIqZG4bAFLoLpnIgNkoGT0Muu6Fxta6gYE_wL6kTNGqaH1QnSGWc4n4BPP7A4" alt="로고" class="h-8"/>
+      <span class="font-bold text-primary text-lg" id="site-title">경북 청년인재스쿨 관리자</span>
     </div>
-    <div class="p-md space-y-md">
-      <div><label class="block font-label-lg mb-xs">주차</label><input class="w-full border border-outline-variant rounded-lg p-2 outline-none focus:ring-2 focus:ring-primary text-label-lg" placeholder="예: 12주차" id="new-task-week"/></div>
-      <div><label class="block font-label-lg mb-xs">과제명</label><input class="w-full border border-outline-variant rounded-lg p-2 outline-none focus:ring-2 focus:ring-primary text-label-lg" placeholder="과제 제목 입력" id="new-task-name"/></div>
-      <div><label class="block font-label-lg mb-xs">마감일</label><input type="date" class="w-full border border-outline-variant rounded-lg p-2 outline-none focus:ring-2 focus:ring-primary text-label-lg" id="new-task-due"/></div>
-      <button class="w-full py-sm bg-primary text-on-primary font-bold rounded-xl hover:opacity-90 transition-opacity" onclick="addNewTask()">과제 등록하기</button>
-    </div>
-  </div>
-</div>
-
-<!-- TOP NAV -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-md h-16 bg-surface border-b border-outline-variant">
-  <div class="flex items-center gap-sm">
-    <img alt="로고" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9KjqT9r4SAipD7VNtiHzoUKinwWdYXwhUb3qH0kOH9j4SCKE8lHK9xhTTYF76XU9o1AG3KydgqiDPcASlYAP0iRjo4haSD_d6CIqXi2dajxzLXvAMuiAXe4Ic_ctvfuuxcxxpUl0-q0Itv6ZUByakPE-mcZ0rXhY2fRu49VVIoAIGOC0PyxDfS51EykQmUV7aKLig_OsmUM-dg2mIqZG4bAFLoLpnIgNkoGT0Muu6Fxta6gYE_wL6kTNGqaH1QnSGWc4n4BPP7A4"/>
-    <span class="font-headline-md text-headline-md font-bold text-primary" id="site-title">경북 청년인재스쿨 관리자</span>
-  </div>
-  <div class="flex items-center gap-md">
-    <div class="relative hidden md:block">
-      <input class="bg-surface-container-low border border-outline-variant rounded-full py-1 px-4 pl-10 text-label-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none w-64" placeholder="검색어를 입력하세요..." type="text" id="global-search"/>
-      <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-    </div>
-    <button class="material-symbols-outlined text-primary hover:bg-surface-container-low p-2 rounded-full transition-colors" onclick="showToast('새로운 알림이 없습니다.')">notifications</button>
-    <div class="flex items-center gap-xs cursor-pointer">
-      <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-label-sm">관리</div>
-    </div>
-    <!-- Logged-in user info & logout -->
-    <div class="flex items-center gap-xs">
-      <div class="hidden md:flex items-center gap-xs bg-surface-container-low border border-outline-variant rounded-full px-sm py-1">
-        <span class="material-symbols-outlined text-[16px] text-primary" id="header-role-icon">manage_accounts</span>
-        <span class="text-label-sm font-bold text-on-surface" id="header-username">관리자</span>
+    <div class="flex items-center gap-3">
+      <div class="relative hidden md:block">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+        <input id="global-search" type="text" placeholder="검색..." class="bg-surface-container-low border border-outline-variant rounded-full py-2 pl-9 pr-4 text-sm w-52 focus:w-64 transition-all"/>
       </div>
-      <button onclick="logout()" class="flex items-center gap-xs px-sm py-1 text-label-sm font-bold text-on-surface-variant hover:bg-surface-container rounded-full transition-colors border border-outline-variant">
-        <span class="material-symbols-outlined text-[16px]">logout</span>
-        <span class="hidden md:inline">로그아웃</span>
+      <button onclick="showToast('새 알림이 없습니다.')" class="material-symbols-outlined text-primary hover:bg-surface-container p-2 rounded-full transition-colors">notifications</button>
+      <div class="flex items-center gap-2 bg-surface-container-low border border-outline-variant rounded-full px-3 py-1">
+        <span class="material-symbols-outlined text-primary text-[16px]" id="hdr-icon">manage_accounts</span>
+        <span class="text-sm font-semibold text-on-surface hidden sm:inline" id="hdr-name">관리자</span>
+      </div>
+      <button onclick="doLogout()" class="flex items-center gap-1 px-3 py-2 text-xs font-semibold text-on-surface-variant hover:bg-error-container hover:text-error border border-outline-variant rounded-full transition-colors">
+        <span class="material-symbols-outlined text-[16px]">logout</span><span class="hidden sm:inline">로그아웃</span>
       </button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="flex pt-16 min-h-screen">
-<!-- SIDEBAR -->
-<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 flex flex-col p-sm bg-surface-container-low border-r border-outline-variant z-40">
-  <div class="mb-lg px-xs">
-    <h2 class="text-primary font-headline-md mb-base" id="sidebar-title">포털 관리</h2>
-    <p class="text-on-surface-variant text-label-sm opacity-70">GYTS 관리자 포털</p>
-  </div>
-  <nav class="flex-1 space-y-xs" id="sidebar-nav">
-    <!-- Rendered by JS -->
-  </nav>
-  <button id="sidebar-cta" class="mb-sm w-full py-sm bg-primary text-on-primary rounded-full font-bold flex items-center justify-center gap-xs shadow-md hover:opacity-90 transition-colors" onclick="openModal('new-task-modal')">
-    <span class="material-symbols-outlined">add</span>
-    <span class="font-label-lg">신규 과제 등록</span>
-  </button>
-  <div class="mt-auto border-t border-outline-variant pt-sm">
-    <a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all" href="#">
-      <span class="material-symbols-outlined">help</span>
-      <span class="font-label-lg text-label-lg">도움말 센터</span>
-    </a>
-  </div>
-</aside>
-
-<!-- MAIN -->
-<main class="ml-64 flex-1 overflow-y-auto bg-background p-lg custom-scrollbar" id="main-content">
-
-<!-- ==================== PAGE: ADMIN DASHBOARD ==================== -->
-<div class="page active" id="page-admin-dashboard">
-<div class="max-w-container-max mx-auto space-y-lg">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-    <div class="bg-surface-container-lowest p-md border border-outline-variant rounded-xl flex flex-col justify-between h-32 relative overflow-hidden group transition-all duration-300 cursor-pointer hover:-translate-y-1">
-      <div class="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 transition-transform duration-500"><span class="material-symbols-outlined" style="font-size:120px">groups</span></div>
-      <span class="text-on-surface-variant font-label-lg">전체 참가 인원</span>
-      <div class="flex items-baseline gap-xs"><span class="text-headline-xl font-headline-xl text-primary" id="stat-participants">128</span><span class="text-label-lg text-on-surface-variant">명</span></div>
-      <div class="text-label-sm text-secondary flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">trending_up</span>전월 대비 +12%</div>
+  <!-- SIDEBAR -->
+  <aside class="sidebar bg-surface-container-low border-r border-outline-variant flex flex-col p-4">
+    <div class="mb-8 px-2">
+      <p class="font-bold text-primary text-lg" id="sb-title">포털 관리</p>
+      <p class="text-xs text-on-surface-variant mt-0.5">GYTS 관리자 포털</p>
     </div>
-    <div class="bg-surface-container-lowest p-md border border-outline-variant rounded-xl flex flex-col justify-between h-32 relative overflow-hidden group transition-all duration-300 cursor-pointer hover:-translate-y-1">
-      <div class="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 transition-transform duration-500"><span class="material-symbols-outlined" style="font-size:120px">calendar_month</span></div>
-      <span class="text-on-surface-variant font-label-lg">평균 출석률</span>
-      <div class="flex items-baseline gap-xs"><span class="text-headline-xl font-headline-xl text-primary">94.2</span><span class="text-label-lg text-on-surface-variant">%</span></div>
-      <div class="w-full bg-surface-container h-2 rounded-full mt-xs"><div class="bg-primary h-full rounded-full" style="width:94.2%"></div></div>
+    <nav id="sb-nav" class="flex-1 space-y-1"></nav>
+    <button id="sb-cta" onclick="openModal('modal-new-task')"
+      class="mt-4 mb-2 w-full py-3 bg-primary text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 shadow-md transition-opacity">
+      <span class="material-symbols-outlined text-[18px]">add</span><span>신규 과제 등록</span>
+    </button>
+    <div class="border-t border-outline-variant pt-3">
+      <button onclick="showToast('도움말 센터는 준비 중입니다.')" class="w-full flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-full text-sm transition-colors">
+        <span class="material-symbols-outlined text-[20px]">help</span>도움말 센터
+      </button>
     </div>
-    <div class="bg-surface-container-lowest p-md border border-outline-variant rounded-xl flex flex-col justify-between h-32 relative overflow-hidden group transition-all duration-300 cursor-pointer hover:-translate-y-1">
-      <div class="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 transition-transform duration-500"><span class="material-symbols-outlined" style="font-size:120px">task_alt</span></div>
-      <span class="text-on-surface-variant font-label-lg">과제 이행률</span>
-      <div class="flex items-baseline gap-xs"><span class="text-headline-xl font-headline-xl text-secondary">87.5</span><span class="text-label-lg text-on-surface-variant">%</span></div>
-      <div class="w-full bg-surface-container h-2 rounded-full mt-xs"><div class="bg-secondary h-full rounded-full" style="width:87.5%"></div></div>
-    </div>
-  </div>
+  </aside>
 
-  <div class="grid grid-cols-1 xl:grid-cols-12 gap-lg items-start">
-    <div class="xl:col-span-8 space-y-md">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
-        <h3 class="text-headline-md font-headline-md flex items-center gap-xs"><span class="material-symbols-outlined text-primary">person_search</span>교육생 관리 현황</h3>
-        <div class="flex gap-xs flex-wrap">
-          <button onclick="filterParticipants('low-attendance')" id="btn-filter-attendance" class="px-sm py-xs bg-error-container text-on-error-container rounded-full text-label-sm font-bold flex items-center gap-xs border border-transparent hover:border-error transition-all">
-            <span class="material-symbols-outlined text-[16px]">warning</span>출석 80% 미만
-          </button>
-          <button onclick="filterParticipants('old-counsel')" id="btn-filter-counsel" class="px-sm py-xs bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-label-sm font-bold flex items-center gap-xs border border-transparent hover:border-tertiary transition-all">
-            <span class="material-symbols-outlined text-[16px]">history</span>상담 7일 경과
-          </button>
-          <button onclick="filterParticipants('all')" class="px-sm py-xs bg-surface-container-high border border-outline-variant text-on-surface rounded-full text-label-sm font-bold flex items-center gap-xs hover:bg-surface-variant transition-all">
-            <span class="material-symbols-outlined text-[16px]">filter_list</span>필터 초기화
-          </button>
+  <!-- MAIN -->
+  <main class="main-area bg-background" id="main-area">
+
+    <!-- ==== PAGE: ADMIN DASHBOARD ==== -->
+    <div class="page active p-6 lg:p-8" id="page-admin-dashboard">
+      <!-- Stats row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white border border-outline-variant rounded-xl p-5 flex flex-col gap-2 relative overflow-hidden hover:-translate-y-1 transition-transform card-shadow group">
+          <div class="absolute -right-3 -top-3 opacity-5 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size:100px">groups</span></div>
+          <p class="text-xs font-semibold text-on-surface-variant">전체 참가 인원</p>
+          <div class="flex items-baseline gap-1"><span class="text-4xl font-bold text-primary">128</span><span class="text-sm text-on-surface-variant">명</span></div>
+          <p class="text-xs text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">trending_up</span>전월 대비 +12%</p>
+        </div>
+        <div class="bg-white border border-outline-variant rounded-xl p-5 flex flex-col gap-2 relative overflow-hidden hover:-translate-y-1 transition-transform card-shadow group">
+          <div class="absolute -right-3 -top-3 opacity-5 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size:100px">calendar_month</span></div>
+          <p class="text-xs font-semibold text-on-surface-variant">평균 출석률</p>
+          <div class="flex items-baseline gap-1"><span class="text-4xl font-bold text-primary">94.2</span><span class="text-sm text-on-surface-variant">%</span></div>
+          <div class="w-full bg-surface-container h-2 rounded-full"><div class="bg-primary h-full rounded-full" style="width:94.2%"></div></div>
+        </div>
+        <div class="bg-white border border-outline-variant rounded-xl p-5 flex flex-col gap-2 relative overflow-hidden hover:-translate-y-1 transition-transform card-shadow group">
+          <div class="absolute -right-3 -top-3 opacity-5 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size:100px">task_alt</span></div>
+          <p class="text-xs font-semibold text-on-surface-variant">과제 이행률</p>
+          <div class="flex items-baseline gap-1"><span class="text-4xl font-bold text-secondary">87.5</span><span class="text-sm text-on-surface-variant">%</span></div>
+          <div class="w-full bg-surface-container h-2 rounded-full"><div class="bg-secondary h-full rounded-full" style="width:87.5%"></div></div>
         </div>
       </div>
 
-      <div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-surface-container-low border-b border-outline-variant">
-                <th class="p-sm text-label-lg font-bold text-on-surface">이름</th>
-                <th class="p-sm text-label-lg font-bold text-on-surface">연락처</th>
-                <th class="p-sm text-label-lg font-bold text-on-surface">소속/기수</th>
-                <th class="p-sm text-label-lg font-bold text-on-surface">출석률</th>
-                <th class="p-sm text-label-lg font-bold text-on-surface">과제 현황</th>
-                <th class="p-sm text-label-lg font-bold text-on-surface">최근 상담</th>
-              </tr>
-            </thead>
-            <tbody id="participants-tbody" class="divide-y divide-outline-variant/30"></tbody>
-          </table>
-        </div>
-        <div class="p-sm bg-surface-container-low flex justify-between items-center border-t border-outline-variant">
-          <span class="text-label-sm text-on-surface-variant" id="participants-count-text">전체 4명 중 1-4 표시</span>
-          <div class="flex gap-xs" id="participants-pagination"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Detail Panel -->
-    <div class="xl:col-span-4 sticky top-4">
-      <div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-md overflow-hidden flex flex-col" style="height:calc(100vh - 160px)">
-        <div class="p-md bg-primary text-on-primary">
-          <div class="flex items-start justify-between">
-            <div>
-              <h4 class="text-headline-md font-headline-md" id="detail-name">김철수 교육생</h4>
-              <p class="text-label-sm opacity-80 mt-base" id="detail-info">A팀 / 4기 / 010-1234-5678</p>
+      <!-- Table + Detail: stacked on small, side by side on xl -->
+      <div class="grid grid-cols-1 xl:grid-cols-5 gap-6 items-start">
+        <!-- Table col (3/5) -->
+        <div class="xl:col-span-3 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h3 class="text-lg font-bold flex items-center gap-2"><span class="material-symbols-outlined text-primary">person_search</span>교육생 관리 현황</h3>
+            <div class="flex gap-2 flex-wrap">
+              <button onclick="filterP('low')" class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-xs font-bold flex items-center gap-1 hover:ring-1 hover:ring-error transition-all">
+                <span class="material-symbols-outlined text-[14px]">warning</span>출석 80% 미만
+              </button>
+              <button onclick="filterP('counsel')" class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold flex items-center gap-1 hover:ring-1 hover:ring-tertiary transition-all">
+                <span class="material-symbols-outlined text-[14px]">history</span>상담 7일 경과
+              </button>
+              <button onclick="filterP('all')" class="px-3 py-1 bg-surface-container-high border border-outline-variant text-on-surface rounded-full text-xs font-bold flex items-center gap-1 hover:bg-surface-variant transition-all">
+                <span class="material-symbols-outlined text-[14px]">filter_list</span>초기화
+              </button>
             </div>
-            <button class="p-1 hover:bg-white/10 rounded-full"><span class="material-symbols-outlined">more_vert</span></button>
           </div>
-          <div class="mt-md flex gap-xs flex-wrap" id="detail-badges">
-            <span class="px-sm py-1 bg-white/20 rounded-full text-label-sm font-bold">출석 위험</span>
-            <span class="px-sm py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-bold">과제 성실</span>
+
+          <div class="bg-white border border-outline-variant rounded-xl overflow-hidden card-shadow">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse text-sm">
+                <thead><tr class="bg-surface-container-low border-b border-outline-variant">
+                  <th class="px-4 py-3 font-semibold">이름</th>
+                  <th class="px-4 py-3 font-semibold hidden md:table-cell">연락처</th>
+                  <th class="px-4 py-3 font-semibold">팀/기수</th>
+                  <th class="px-4 py-3 font-semibold">출석률</th>
+                  <th class="px-4 py-3 font-semibold">과제</th>
+                  <th class="px-4 py-3 font-semibold hidden lg:table-cell">최근 상담</th>
+                </tr></thead>
+                <tbody id="ptable" class="divide-y divide-outline-variant/30"></tbody>
+              </table>
+            </div>
+            <div class="px-4 py-3 bg-surface-container-low flex justify-between items-center border-t border-outline-variant text-xs text-on-surface-variant">
+              <span id="p-count-text">전체 4명</span>
+            </div>
           </div>
         </div>
-        <div class="flex-1 p-md overflow-y-auto custom-scrollbar space-y-md bg-background">
-          <div class="flex items-center justify-between">
-            <h5 class="text-label-lg font-bold flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">history_edu</span>상담 및 관리 이력</h5>
-            <span class="text-label-sm text-on-surface-variant" id="memo-count">총 2건</span>
-          </div>
-          <div id="memo-list" class="space-y-sm"></div>
-        </div>
-        <div class="p-md bg-surface-container-low border-t border-outline-variant">
-          <h5 class="text-label-lg font-bold mb-sm">신규 관리 메모 작성</h5>
-          <div class="space-y-sm">
-            <div class="grid grid-cols-2 gap-sm">
-              <div class="space-y-xs">
-                <label class="text-label-sm text-on-surface-variant">상담 일자</label>
-                <input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-2 text-label-sm outline-none focus:ring-2 focus:ring-primary" type="date" id="memo-date"/>
+
+        <!-- Detail panel (2/5) -->
+        <div class="xl:col-span-2">
+          <div class="bg-white border border-outline-variant rounded-xl card-shadow overflow-hidden">
+            <div class="bg-primary text-white p-5">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="text-xl font-bold" id="det-name">김철수 교육생</h4>
+                  <p class="text-xs opacity-70 mt-1" id="det-info">A팀 / 4기 / 010-1234-5678</p>
+                </div>
+                <button class="p-1 hover:bg-white/10 rounded-full"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
               </div>
-              <div class="space-y-xs">
-                <label class="text-label-sm text-on-surface-variant">연락 방식</label>
-                <select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-2 text-label-sm outline-none focus:ring-2 focus:ring-primary" id="memo-type">
-                  <option>대면 상담</option><option>유선 연락</option><option>문자/카톡</option><option>이메일</option>
-                </select>
+              <div class="mt-3 flex gap-2 flex-wrap" id="det-badges">
+                <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">출석 위험</span>
+                <span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">과제 성실</span>
               </div>
             </div>
-            <div class="space-y-xs">
-              <label class="text-label-sm text-on-surface-variant">상담 내용</label>
-              <textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-2 text-label-sm outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="내용을 입력하세요..." rows="3" id="memo-content"></textarea>
+
+            <!-- Memo list -->
+            <div class="max-h-64 overflow-y-auto cscroll p-4 space-y-3 bg-background" id="memo-list">
+              <div class="flex items-center justify-between mb-2">
+                <h5 class="text-sm font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">history_edu</span>상담 및 관리 이력</h5>
+                <span class="text-xs text-on-surface-variant" id="memo-count">총 0건</span>
+              </div>
             </div>
-            <button onclick="saveMemo()" class="w-full py-sm bg-primary text-on-primary rounded-lg font-bold hover:opacity-90 transition-colors active:scale-95">메모 저장하기</button>
+
+            <!-- Memo form -->
+            <div class="p-4 bg-surface-container-low border-t border-outline-variant space-y-3">
+              <h5 class="text-sm font-bold">신규 관리 메모 작성</h5>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-xs text-on-surface-variant block mb-1">상담 일자</label>
+                  <input type="date" id="memo-date" class="w-full bg-white border border-outline-variant rounded-lg px-3 py-2 text-xs"/>
+                </div>
+                <div>
+                  <label class="text-xs text-on-surface-variant block mb-1">연락 방식</label>
+                  <select id="memo-type" class="w-full bg-white border border-outline-variant rounded-lg px-3 py-2 text-xs">
+                    <option>대면 상담</option><option>유선 연락</option><option>문자/카톡</option><option>이메일</option>
+                  </select>
+                </div>
+              </div>
+              <textarea id="memo-text" rows="3" placeholder="내용을 입력하세요..." class="w-full bg-white border border-outline-variant rounded-lg px-3 py-2 text-xs resize-none"></textarea>
+              <button onclick="saveMemo()" class="w-full py-2.5 bg-primary text-white rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all">메모 저장하기</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
 
-<!-- ==================== PAGE: PARTICIPANTS ==================== -->
-<div class="page" id="page-participants">
-<div class="max-w-container-max mx-auto space-y-lg">
-  <div class="flex justify-between items-center">
-    <h1 class="font-headline-lg text-headline-lg text-primary">참여자 명단</h1>
-    <button class="px-md py-sm bg-primary text-on-primary rounded-lg font-bold flex items-center gap-xs hover:opacity-90" onclick="showToast('참여자 추가 기능은 준비 중입니다.')">
-      <span class="material-symbols-outlined">person_add</span>참여자 추가
-    </button>
-  </div>
-  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
-    <div class="p-md bg-surface-container-low border-b border-outline-variant flex gap-md items-center">
-      <div class="relative flex-1 max-w-sm">
-        <input class="w-full bg-white border border-outline-variant rounded-full py-2 px-4 pl-10 text-label-lg outline-none focus:ring-2 focus:ring-primary" placeholder="이름 또는 연락처 검색..." type="text" id="participant-search" oninput="searchParticipants(this.value)"/>
-        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-      </div>
-      <select class="bg-white border border-outline-variant rounded-lg p-2 text-label-lg outline-none focus:ring-2 focus:ring-primary" onchange="filterByTeam(this.value)">
-        <option value="">전체 팀</option><option value="A팀">A팀</option><option value="B팀">B팀</option><option value="C팀">C팀</option>
-      </select>
-    </div>
-    <div class="overflow-x-auto">
-      <table class="w-full text-left border-collapse">
-        <thead><tr class="bg-surface-container-low border-b border-outline-variant">
-          <th class="p-sm text-label-lg font-bold">이름</th><th class="p-sm text-label-lg font-bold">연락처</th><th class="p-sm text-label-lg font-bold">소속/기수</th><th class="p-sm text-label-lg font-bold">출석률</th><th class="p-sm text-label-lg font-bold">과제 현황</th><th class="p-sm text-label-lg font-bold">상태</th>
-        </tr></thead>
-        <tbody id="participants-full-tbody" class="divide-y divide-outline-variant/30"></tbody>
-      </table>
-    </div>
-    <div class="p-sm bg-surface-container-low flex justify-between items-center border-t border-outline-variant">
-      <span class="text-label-sm text-on-surface-variant" id="participants-full-count">전체 4명</span>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- ==================== PAGE: TASK MANAGEMENT ==================== -->
-<div class="page" id="page-tasks">
-<div class="max-w-container-max mx-auto space-y-lg">
-  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
-    <div>
-      <h1 class="font-headline-lg text-headline-lg text-on-surface">과제 관리 시스템</h1>
-      <p class="text-body-md text-on-surface-variant">2024 경북 청년인재스쿨 1학기 교육과정 과제 현황</p>
-    </div>
-    <button onclick="exportExcel()" class="px-md py-sm border border-primary text-primary font-bold rounded-lg hover:bg-surface-container-low transition-colors flex items-center gap-xs">
-      <span class="material-symbols-outlined">file_download</span>전체 결과 엑셀 추출
-    </button>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-    <div class="bg-white p-md rounded-xl border border-outline-variant card-shadow flex flex-col justify-between">
-      <div><p class="text-label-sm text-on-surface-variant uppercase tracking-wider">전체 제출률</p><h3 class="text-headline-xl font-headline-xl text-primary mt-xs">84.2%</h3></div>
-      <div class="mt-md"><div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden"><div class="bg-primary h-full" style="width:84.2%"></div></div><p class="text-label-sm text-on-surface-variant mt-xs">전주 대비 2.1% 상승</p></div>
-    </div>
-    <div class="bg-white p-md rounded-xl border border-outline-variant card-shadow">
-      <p class="text-label-sm text-on-surface-variant uppercase tracking-wider">미처리 과제</p>
-      <div class="flex items-end justify-between mt-xs"><h3 class="text-headline-xl font-headline-xl text-error" id="pending-count">2</h3><span class="material-symbols-outlined text-error-container p-sm bg-error-container/20 rounded-full">pending_actions</span></div>
-      <p class="text-label-sm text-on-surface-variant mt-md">승인 대기 중인 제출물</p>
-    </div>
-    <div class="bg-secondary-container p-md rounded-xl border border-outline-variant card-shadow">
-      <p class="text-label-sm text-on-secondary-container uppercase tracking-wider">활동 중인 학생</p>
-      <div class="flex items-end justify-between mt-xs"><h3 class="text-headline-xl font-headline-xl text-on-secondary-container">128명</h3><span class="material-symbols-outlined text-on-secondary-container">group</span></div>
-      <p class="text-label-sm text-on-secondary-container mt-md">최근 24시간 내 접속</p>
-    </div>
-  </div>
-
-  <div class="bg-white rounded-xl border border-outline-variant overflow-hidden card-shadow">
-    <div class="p-md border-b border-outline-variant bg-surface-bright flex flex-col sm:flex-row justify-between items-start sm:items-center gap-sm">
-      <div class="flex items-center gap-md">
-        <h4 class="font-headline-md text-headline-md text-on-surface">주차별 과제 리스트</h4>
-        <div class="flex border border-outline-variant rounded-lg overflow-hidden">
-          <button onclick="filterTasks('all')" id="task-filter-all" class="px-sm py-1 bg-surface-variant text-on-surface font-bold text-label-sm">전체</button>
-          <button onclick="filterTasks('active')" id="task-filter-active" class="px-sm py-1 text-on-surface-variant text-label-sm hover:bg-surface-variant">진행중</button>
-          <button onclick="filterTasks('closed')" id="task-filter-closed" class="px-sm py-1 text-on-surface-variant text-label-sm hover:bg-surface-variant">마감</button>
-        </div>
-      </div>
-      <div class="relative w-full sm:w-64">
-        <span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-        <input class="w-full pl-xl pr-sm py-xs border border-outline-variant rounded-lg bg-surface text-label-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="과제명 검색..." type="text" id="task-search" oninput="searchTasks(this.value)"/>
-      </div>
-    </div>
-    <div class="overflow-x-auto">
-      <table class="w-full text-left border-collapse">
-        <thead class="bg-surface text-on-surface-variant font-label-lg text-label-lg">
-          <tr>
-            <th class="px-md py-sm font-semibold border-b border-outline-variant">주차</th>
-            <th class="px-md py-sm font-semibold border-b border-outline-variant">과제명</th>
-            <th class="px-md py-sm font-semibold border-b border-outline-variant">마감일</th>
-            <th class="px-md py-sm font-semibold border-b border-outline-variant">제출 현황</th>
-            <th class="px-md py-sm font-semibold border-b border-outline-variant text-center">상태</th>
-            <th class="px-md py-sm font-semibold border-b border-outline-variant text-right">관리</th>
-          </tr>
-        </thead>
-        <tbody id="tasks-tbody" class="divide-y divide-surface-variant"></tbody>
-      </table>
-    </div>
-    <div class="p-md bg-surface border-t border-outline-variant flex justify-between items-center">
-      <p class="text-label-sm text-on-surface-variant" id="tasks-count-text">전체 3개 과제</p>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
-    <div class="lg:col-span-8 bg-white border border-outline-variant rounded-xl card-shadow overflow-hidden">
-      <div class="p-md border-b border-outline-variant flex justify-between items-center">
-        <h4 class="font-headline-md text-headline-md text-on-surface">미처리 제출물 상세</h4>
-        <span class="text-label-sm px-sm py-1 bg-error/10 text-error rounded-full font-bold" id="submissions-badge">2건 대기</span>
-      </div>
-      <div id="submissions-list" class="divide-y divide-surface-variant max-h-[400px] overflow-y-auto custom-scrollbar"></div>
-    </div>
-    <div class="lg:col-span-4 bg-primary text-white rounded-xl card-shadow p-md flex flex-col">
-      <h4 class="font-headline-md text-headline-md mb-md">공지사항 및 안내</h4>
-      <div class="flex-grow space-y-md">
-        <div class="p-sm bg-white/10 rounded-lg"><p class="text-label-sm font-bold mb-1">시스템 정기 점검</p><p class="text-label-sm opacity-80">2024-04-01 00:00 ~ 04:00 (4시간)</p></div>
-        <div class="p-sm bg-white/10 rounded-lg"><p class="text-label-sm font-bold mb-1">성적 산출 기준 변경</p><p class="text-label-sm opacity-80">미제출 1회 시 최종 점수 5점 감점 적용</p></div>
-      </div>
-      <div class="mt-xl pt-md border-t border-white/20">
-        <p class="text-label-sm opacity-70 mb-sm">업로드 가이드</p>
-        <div onclick="showToast('대량 과제 등록 기능은 준비 중입니다.')" class="p-md border-2 border-dashed border-white/40 rounded-xl bg-white/5 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-white/10 transition-colors">
-          <span class="material-symbols-outlined text-[32px] mb-sm">cloud_upload</span>
-          <p class="text-label-sm font-bold">대량 과제 등록</p>
-          <p class="text-[10px] opacity-60">Excel/CSV 양식을 드래그 앤 드롭</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- ==================== PAGE: NOTICES ==================== -->
-<div class="page" id="page-notices">
-<div class="max-w-container-max mx-auto">
-  <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-lg gap-md">
-    <div>
-      <h1 class="font-headline-lg text-headline-lg text-primary mb-xs">공지사항</h1>
-      <p class="font-body-md text-body-md text-on-surface-variant">인재양성학교의 주요 소식과 공지사항을 확인하세요.</p>
-    </div>
-    <button onclick="navigate('notice-write')" class="bg-primary text-on-primary px-md py-sm rounded-lg font-label-lg flex items-center gap-xs hover:shadow-lg transition-shadow active:scale-95">
-      <span class="material-symbols-outlined">edit</span>공지사항 작성
-    </button>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-lg">
-    <div class="bg-white/80 backdrop-blur-sm border border-outline-variant p-md rounded-xl flex flex-col justify-between">
-      <div class="flex items-center justify-between mb-sm"><span class="text-label-lg text-on-surface-variant">전체 공지</span><span class="material-symbols-outlined text-primary">article</span></div>
-      <div class="text-headline-md font-bold" id="notices-total-count">6 건</div>
-    </div>
-    <div class="bg-white/80 backdrop-blur-sm border border-outline-variant p-md rounded-xl flex flex-col justify-between border-l-4 border-l-error">
-      <div class="flex items-center justify-between mb-sm"><span class="text-label-lg text-on-surface-variant">중요 공지</span><span class="material-symbols-outlined text-error" style="font-variation-settings:'FILL' 1">push_pin</span></div>
-      <div class="text-headline-md font-bold">2 건</div>
-    </div>
-    <div class="bg-white/80 backdrop-blur-sm border border-outline-variant p-md rounded-xl flex flex-col justify-between">
-      <div class="flex items-center justify-between mb-sm"><span class="text-label-lg text-on-surface-variant">새로운 소식 (24h)</span><span class="material-symbols-outlined text-secondary">new_releases</span></div>
-      <div class="text-headline-md font-bold">1 건</div>
-    </div>
-  </div>
-
-  <div class="bg-surface-container-lowest p-sm border border-outline-variant rounded-t-xl flex flex-col md:flex-row justify-between items-center gap-sm">
-    <div class="flex gap-xs flex-wrap" id="notice-category-btns">
-      <button onclick="filterNotices('')" class="px-sm py-xs bg-primary-container text-on-primary-container rounded-full text-label-sm font-bold">전체</button>
-      <button onclick="filterNotices('EVENT')" class="px-sm py-xs hover:bg-surface-container text-on-surface-variant rounded-full text-label-sm">행사</button>
-      <button onclick="filterNotices('ADMIN')" class="px-sm py-xs hover:bg-surface-container text-on-surface-variant rounded-full text-label-sm">관리</button>
-      <button onclick="filterNotices('CAREER')" class="px-sm py-xs hover:bg-surface-container text-on-surface-variant rounded-full text-label-sm">취업/채용</button>
-      <button onclick="filterNotices('SCHOLARSHIP')" class="px-sm py-xs hover:bg-surface-container text-on-surface-variant rounded-full text-label-sm">장학</button>
-    </div>
-    <div class="flex items-center gap-sm w-full md:w-auto">
-      <div class="relative flex-1 md:w-64">
-        <input type="text" placeholder="공지사항 검색" class="w-full bg-surface-container px-sm py-xs rounded-full border border-outline-variant text-label-sm focus:outline-none focus:ring-2 focus:ring-primary pl-8" id="notice-search" oninput="searchNotices(this.value)"/>
-        <span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
-      </div>
-    </div>
-  </div>
-  <div class="bg-surface-container-lowest border-x border-b border-outline-variant rounded-b-xl overflow-hidden shadow-sm">
-    <div class="overflow-x-auto">
-      <table class="w-full text-left border-collapse">
-        <thead class="bg-surface-container-low border-b border-outline-variant">
-          <tr>
-            <th class="py-md px-md w-16 text-center font-label-lg text-on-surface-variant">No.</th>
-            <th class="py-md px-md font-label-lg text-on-surface-variant">제목</th>
-            <th class="py-md px-md w-32 font-label-lg text-on-surface-variant text-center">작성일</th>
-            <th class="py-md px-md w-24 font-label-lg text-on-surface-variant text-center">조회수</th>
-            <th class="py-md px-md w-20 text-center font-label-lg text-on-surface-variant">관리</th>
-          </tr>
-        </thead>
-        <tbody id="notices-tbody" class="divide-y divide-outline-variant"></tbody>
-      </table>
-    </div>
-    <div class="bg-surface py-md px-md flex items-center justify-between">
-      <p class="text-label-sm text-on-surface-variant" id="notices-count-text">전체 6건</p>
-      <div class="flex items-center gap-xs" id="notices-pagination"></div>
-    </div>
-  </div>
-
-  <div class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
-    <div class="relative overflow-hidden rounded-2xl bg-primary-container p-lg flex flex-col justify-end min-h-[200px] text-on-primary">
-      <div class="absolute top-4 right-4 opacity-10"><span class="material-symbols-outlined text-[120px]">campaign</span></div>
-      <h3 class="font-headline-md mb-xs">카카오톡 채널 안내</h3>
-      <p class="font-body-md opacity-90 mb-md">실시간 공지사항과 문의사항은 GYTS 카카오톡 채널을 통해 더욱 빠르게 확인하실 수 있습니다.</p>
-      <button onclick="showToast('카카오톡 채널로 이동합니다.')" class="self-start px-md py-sm bg-surface text-primary rounded-full font-bold hover:bg-primary-fixed transition-colors">채널 바로가기</button>
-    </div>
-    <div class="bg-white/80 backdrop-blur-sm p-lg rounded-2xl flex items-center gap-md border border-outline-variant">
-      <div class="w-24 h-24 flex-shrink-0 bg-secondary-container rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-on-secondary-container text-[48px]">download_for_offline</span></div>
-      <div>
-        <h3 class="font-label-lg text-headline-md text-primary mb-xs">서식 자료실</h3>
-        <p class="font-body-md text-on-surface-variant mb-sm">학사 일정, 수당 신청서 등 각종 서식이 필요하신가요?</p>
-        <button onclick="showToast('서식 자료실로 이동합니다.')" class="text-primary font-bold flex items-center gap-xs hover:underline text-label-lg">자료실 이동 <span class="material-symbols-outlined">arrow_forward</span></button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- ==================== PAGE: NOTICE WRITE ==================== -->
-<div class="page" id="page-notice-write">
-<div class="max-w-[1200px] mx-auto">
-  <div class="mb-lg flex flex-col md:flex-row md:items-end justify-between gap-md">
-    <div>
-      <nav class="flex text-label-sm text-on-surface-variant gap-xs mb-xs">
-        <button onclick="navigate('notices')" class="hover:text-primary transition-colors">공지사항</button>
-        <span>/</span><span class="text-primary font-bold">공지사항 작성</span>
-      </nav>
-      <h1 class="font-headline-lg text-headline-lg text-on-surface">공지사항 작성</h1>
-      <p class="text-body-md text-on-surface-variant">경북 청년 인재들을 위한 새로운 소식을 등록하세요.</p>
-    </div>
-    <div class="flex gap-sm">
-      <button onclick="navigate('notices')" class="px-md py-xs border border-outline text-primary text-label-lg font-bold rounded hover:bg-surface-container-low transition-colors">취소</button>
-      <button onclick="saveDraft()" class="px-md py-xs border border-primary text-primary text-label-lg font-bold rounded hover:bg-primary-fixed transition-colors">임시 저장</button>
-      <button onclick="publishNotice()" class="px-lg py-xs bg-primary text-on-primary text-label-lg font-bold rounded hover:opacity-90 shadow-md transition-all active:scale-95">발행하기</button>
-    </div>
-  </div>
-
-  <div class="bg-white border border-outline-variant rounded-lg p-md md:p-xl shadow-sm">
-    <form class="space-y-lg" onsubmit="return false;">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-        <div class="space-y-xs">
-          <label class="font-label-lg text-on-surface block">카테고리 선택</label>
-          <select id="notice-category" class="w-full bg-white border border-outline-variant rounded-lg px-sm py-xs text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none">
-            <option value="">일반 공지</option><option value="EVENT">이벤트</option><option value="CAREER">채용/커리어</option><option value="SCHOLARSHIP">장학 정보</option>
-          </select>
-        </div>
-        <div class="flex items-center gap-md pt-lg md:pt-0">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input class="sr-only peer" type="checkbox" id="notice-pinned"/>
-            <div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-            <span class="ml-sm font-label-lg text-on-surface">상단 고정</span>
-          </label>
-        </div>
-      </div>
-      <div class="space-y-xs">
-        <label class="font-label-lg text-on-surface block">제목</label>
-        <input id="notice-title" class="w-full bg-white border border-outline-variant rounded-lg px-sm py-xs text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="공지사항 제목을 입력하세요" type="text"/>
-      </div>
-      <div class="space-y-xs">
-        <label class="font-label-lg text-on-surface block">대상 설정</label>
-        <div class="flex flex-wrap gap-sm" id="audience-radios">
-          <label class="flex items-center gap-xs cursor-pointer border border-primary bg-primary-fixed px-sm py-xs rounded-full">
-            <input checked class="w-4 h-4 text-primary" name="audience" type="radio" value="전체"/><span class="text-label-lg text-primary font-bold">전체</span>
-          </label>
-          <label class="flex items-center gap-xs cursor-pointer border border-outline-variant px-sm py-xs rounded-full hover:bg-surface-variant transition-colors">
-            <input class="w-4 h-4 text-primary" name="audience" type="radio" value="1기"/><span class="text-label-lg text-on-surface-variant">1기 인재</span>
-          </label>
-          <label class="flex items-center gap-xs cursor-pointer border border-outline-variant px-sm py-xs rounded-full hover:bg-surface-variant transition-colors">
-            <input class="w-4 h-4 text-primary" name="audience" type="radio" value="2기"/><span class="text-label-lg text-on-surface-variant">2기 인재</span>
-          </label>
-          <label class="flex items-center gap-xs cursor-pointer border border-outline-variant px-sm py-xs rounded-full hover:bg-surface-variant transition-colors">
-            <input class="w-4 h-4 text-primary" name="audience" type="radio" value="특정기수"/><span class="text-label-lg text-on-surface-variant">특정 기수 선택</span>
-          </label>
-        </div>
-      </div>
-      <div class="space-y-xs">
-        <label class="font-label-lg text-on-surface block">본문 내용</label>
-        <div class="border border-outline-variant rounded-lg overflow-hidden focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
-          <div class="bg-surface-container-low border-b border-outline-variant p-xs flex gap-xs flex-wrap">
-            <button type="button" onclick="formatText('bold')" title="굵게" class="p-xs hover:bg-surface-variant rounded transition-colors"><span class="material-symbols-outlined text-on-surface-variant">format_bold</span></button>
-            <button type="button" onclick="formatText('italic')" title="기울임꼴" class="p-xs hover:bg-surface-variant rounded transition-colors"><span class="material-symbols-outlined text-on-surface-variant">format_italic</span></button>
-            <button type="button" onclick="formatText('insertUnorderedList')" title="글머리" class="p-xs hover:bg-surface-variant rounded transition-colors"><span class="material-symbols-outlined text-on-surface-variant">format_list_bulleted</span></button>
-            <button type="button" onclick="formatText('insertOrderedList')" title="번호 목록" class="p-xs hover:bg-surface-variant rounded transition-colors"><span class="material-symbols-outlined text-on-surface-variant">format_list_numbered</span></button>
-            <div class="w-[1px] h-6 bg-outline-variant mx-xs"></div>
-            <button type="button" onclick="insertLink()" title="링크" class="p-xs hover:bg-surface-variant rounded transition-colors"><span class="material-symbols-outlined text-on-surface-variant">link</span></button>
-          </div>
-          <div id="notice-body" contenteditable="true" class="w-full p-sm bg-white min-h-[200px] text-body-md outline-none" style="min-height:200px" data-placeholder="공지사항 내용을 상세히 작성해주세요..."></div>
-        </div>
-      </div>
-      <div class="space-y-xs">
-        <label class="font-label-lg text-on-surface block">첨부 파일</label>
-        <div class="border-2 border-dashed border-outline-variant bg-surface-container-low rounded-lg p-xl flex flex-col items-center justify-center gap-xs cursor-pointer hover:bg-surface-variant transition-all" id="notice-dropzone">
-          <span class="material-symbols-outlined text-primary text-4xl">cloud_upload</span>
-          <p class="text-label-lg font-bold text-on-surface">파일을 드래그하여 업로드하거나 클릭하여 선택하세요</p>
-          <p class="text-label-sm text-on-surface-variant">PDF, DOCX, ZIP, JPG, PNG (최대 20MB)</p>
-          <input class="hidden" id="notice-file-input" multiple type="file"/>
-        </div>
-        <div class="mt-sm space-y-xs" id="notice-file-list"></div>
-      </div>
-    </form>
-  </div>
-</div>
-</div>
-
-<!-- ==================== PAGE: MY PAGE ==================== -->
-<div class="page" id="page-mypage">
-<div class="max-w-container-max mx-auto">
-  <section class="mb-lg">
-    <h2 class="font-headline-xl text-headline-xl text-primary mb-xs">안녕하세요, 김경북님!</h2>
-    <p class="font-body-lg text-body-lg text-on-surface-variant">오늘도 당신의 꿈을 향한 한 걸음을 응원합니다.</p>
-  </section>
-
-  <div class="grid grid-cols-1 md:grid-cols-12 gap-md mb-xl">
-    <div class="col-span-12 md:col-span-4 bg-white p-md border border-outline-variant rounded-xl card-shadow flex flex-col justify-between">
-      <div>
-        <h3 class="font-label-lg text-label-lg text-on-surface-variant mb-md flex items-center gap-xs"><span class="material-symbols-outlined text-primary">calendar_today</span>현재 출석률</h3>
-        <div class="flex items-baseline gap-xs"><span class="font-headline-xl text-headline-xl text-primary">92%</span><span class="font-label-sm text-label-sm text-secondary">평균 이상</span></div>
-      </div>
-      <div class="mt-lg">
-        <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width:92%"></div></div>
-        <p class="font-label-sm text-label-sm text-on-surface-variant mt-xs text-right">목표 100%까지 8% 남았습니다.</p>
-      </div>
-    </div>
-    <div class="col-span-12 md:col-span-8 bg-white p-md border border-outline-variant rounded-xl card-shadow">
-      <h3 class="font-label-lg text-label-lg text-on-surface-variant mb-md flex items-center gap-xs"><span class="material-symbols-outlined text-primary">assignment_turned_in</span>나의 과제 현황</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-md">
-        <div class="p-sm bg-surface-container-low rounded-lg text-center"><p class="font-label-sm text-label-sm text-on-surface-variant">전체 과제</p><p class="font-headline-md text-headline-md text-primary">12</p></div>
-        <div class="p-sm bg-surface-container-low rounded-lg text-center"><p class="font-label-sm text-label-sm text-on-surface-variant">제출 완료</p><p class="font-headline-md text-headline-md text-secondary">8</p></div>
-        <div class="p-sm bg-surface-container-low rounded-lg text-center"><p class="font-label-sm text-label-sm text-on-surface-variant">검토 중</p><p class="font-headline-md text-headline-md text-tertiary">2</p></div>
-        <div class="p-sm bg-surface-container-low rounded-lg text-center border-2 border-primary-fixed"><p class="font-label-sm text-label-sm text-primary font-bold">미제출</p><p class="font-headline-md text-headline-md text-error">2</p></div>
-      </div>
-      <div class="mt-md p-sm bg-primary-fixed text-on-primary-fixed rounded-lg flex items-center justify-between">
-        <p class="font-label-lg text-label-lg">이번 주 마감 과제가 <span class="font-bold underline">1건</span> 있습니다.</p>
-        <span class="material-symbols-outlined">chevron_right</span>
-      </div>
-    </div>
-    <div class="col-span-12 bg-white p-md border border-outline-variant rounded-xl card-shadow">
-      <h3 class="font-label-lg text-label-lg text-on-surface-variant mb-md">최근 활동 내역</h3>
-      <div class="space-y-sm">
-        <div class="flex items-center gap-md py-xs border-b border-surface-container-high">
-          <div class="w-10 h-10 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center"><span class="material-symbols-outlined">check_circle</span></div>
-          <div class="flex-1"><p class="font-label-lg text-label-lg">'자기소개서 첨삭 과제' 제출이 승인되었습니다.</p><p class="font-label-sm text-label-sm text-on-surface-variant">2시간 전</p></div>
-        </div>
-        <div class="flex items-center gap-md py-xs">
-          <div class="w-10 h-10 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center"><span class="material-symbols-outlined">notifications_active</span></div>
-          <div class="flex-1"><p class="font-label-lg text-label-lg">새로운 공지사항: '6월 현장 견학 일정 안내'가 등록되었습니다.</p><p class="font-label-sm text-label-sm text-on-surface-variant">어제</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-12 gap-lg">
-    <div class="col-span-12 lg:col-span-8">
-      <div class="flex items-center justify-between mb-md">
-        <h3 class="font-headline-md text-headline-md text-on-surface">주차별 과제 목록</h3>
-        <button onclick="navigate('tasks')" class="text-primary font-label-lg flex items-center gap-xs hover:underline">전체보기 <span class="material-symbols-outlined">arrow_forward</span></button>
-      </div>
-      <div class="space-y-sm">
-        <div class="bg-white border border-outline-variant p-md rounded-xl card-shadow flex flex-col md:flex-row md:items-center justify-between gap-md">
-          <div class="flex-1">
-            <div class="flex items-center gap-sm mb-xs"><span class="px-xs py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded font-bold uppercase">10주차</span><span class="px-2 py-0.5 rounded-full text-[12px] bg-secondary/10 text-secondary font-medium">승인 완료</span></div>
-            <h4 class="font-label-lg text-label-lg text-on-surface">창업 아이디어 피칭 데크 수정본</h4>
-            <p class="font-label-sm text-label-sm text-on-surface-variant">제출일: 2024.05.20 14:30</p>
-          </div>
-          <button onclick="showToast('수정 기능은 준비 중입니다.')" class="px-md py-sm border border-primary text-primary font-label-lg rounded-lg hover:bg-primary-fixed transition-colors">수정하기</button>
-        </div>
-        <div class="bg-primary/5 border-2 border-primary p-md rounded-xl card-shadow flex flex-col md:flex-row md:items-center justify-between gap-md">
-          <div class="flex-1">
-            <div class="flex items-center gap-sm mb-xs"><span class="px-xs py-0.5 bg-primary text-on-primary text-[10px] rounded font-bold uppercase">11주차</span><span class="px-2 py-0.5 rounded-full text-[12px] bg-error/10 text-error font-medium">제출 대기</span></div>
-            <h4 class="font-label-lg text-label-lg text-on-surface font-bold">마케팅 믹스(4P) 분석 보고서</h4>
-            <p class="font-label-sm text-label-sm text-error font-medium">마감 임박: D-1 (5월 26일)</p>
-          </div>
-          <button onclick="openModal('upload-modal')" class="px-md py-sm bg-primary text-on-primary font-label-lg rounded-lg shadow-sm hover:opacity-90 transition-opacity">과제 제출하기</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-span-12 lg:col-span-4 space-y-lg">
-      <div class="bg-primary-container p-md rounded-xl card-shadow text-on-primary-container">
-        <h3 class="font-headline-md text-headline-md mb-xs">실시간 소통 창구</h3>
-        <p class="font-body-md text-body-md mb-md opacity-90">교육생들과 멘토가 함께하는 카카오톡 오픈채팅방에 참여하세요.</p>
-        <button onclick="showToast('카카오톡 오픈채팅방으로 이동합니다.')" class="w-full py-sm bg-white text-primary text-center font-bold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-sm">
-          <span class="material-symbols-outlined">forum</span>오픈채팅방 입장하기
+    <!-- ==== PAGE: PARTICIPANTS ==== -->
+    <div class="page p-6 lg:p-8" id="page-participants">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold text-primary">참여자 명단</h1>
+        <button onclick="showToast('참여자 추가 기능은 준비 중입니다.')" class="px-4 py-2 bg-primary text-white rounded-lg font-bold text-sm flex items-center gap-2 hover:opacity-90">
+          <span class="material-symbols-outlined text-[18px]">person_add</span>참여자 추가
         </button>
       </div>
-      <div class="bg-white border border-outline-variant p-md rounded-xl card-shadow">
-        <div class="flex items-center justify-between mb-md">
-          <h3 class="font-label-lg text-label-lg text-on-surface font-bold">중요 공지사항</h3>
-          <button onclick="navigate('notices')" class="material-symbols-outlined text-on-surface-variant hover:text-primary">more_horiz</button>
+      <div class="bg-white border border-outline-variant rounded-xl overflow-hidden card-shadow">
+        <div class="p-4 bg-surface-container-low border-b border-outline-variant flex flex-wrap gap-3">
+          <div class="relative flex-1 min-w-48">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+            <input type="text" id="psearch" placeholder="이름 또는 연락처..." class="w-full bg-white border border-outline-variant rounded-full py-2 pl-9 pr-4 text-sm" oninput="renderPFull()"/>
+          </div>
+          <select onchange="renderPFull()" id="pteam-filter" class="bg-white border border-outline-variant rounded-lg px-3 py-2 text-sm">
+            <option value="">전체 팀</option><option>A팀</option><option>B팀</option><option>C팀</option>
+          </select>
         </div>
-        <ul class="space-y-sm">
-          <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="font-label-sm text-label-sm text-primary mb-1">2024.05.24</p><p class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors line-clamp-1">[긴급] 6월 전문가 멘토링 시간 변경 안내</p></button></li>
-          <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="font-label-sm text-label-sm text-on-surface-variant mb-1">2024.05.22</p><p class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors line-clamp-1">포트폴리오 경진대회 참여 안내 및 신청 서식</p></button></li>
-          <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="font-label-sm text-label-sm text-on-surface-variant mb-1">2024.05.18</p><p class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors line-clamp-1">여름방학 인턴십 연계 기업 목록 업데이트</p></button></li>
-        </ul>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead><tr class="bg-surface-container-low border-b border-outline-variant">
+              <th class="px-4 py-3 font-semibold">이름</th><th class="px-4 py-3 font-semibold">연락처</th><th class="px-4 py-3 font-semibold">팀/기수</th><th class="px-4 py-3 font-semibold">출석률</th><th class="px-4 py-3 font-semibold">과제</th><th class="px-4 py-3 font-semibold">상태</th>
+            </tr></thead>
+            <tbody id="ptable-full" class="divide-y divide-outline-variant/30"></tbody>
+          </table>
+        </div>
+        <div class="px-4 py-3 bg-surface-container-low border-t border-outline-variant text-xs text-on-surface-variant" id="pfull-count">전체 4명</div>
       </div>
+    </div>
+
+    <!-- ==== PAGE: TASKS ==== -->
+    <div class="page p-6 lg:p-8" id="page-tasks">
+      <div class="flex flex-wrap justify-between items-center mb-6 gap-3">
+        <div>
+          <h1 class="text-2xl font-bold">과제 관리 시스템</h1>
+          <p class="text-sm text-on-surface-variant mt-1">2024 경북 청년인재스쿨 1학기 교육과정</p>
+        </div>
+        <button onclick="showToast('엑셀 다운로드를 시작합니다.')" class="px-4 py-2 border border-primary text-primary font-bold rounded-lg text-sm flex items-center gap-2 hover:bg-surface-container-low">
+          <span class="material-symbols-outlined text-[18px]">file_download</span>엑셀 추출
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white border border-outline-variant rounded-xl p-5 card-shadow">
+          <p class="text-xs text-on-surface-variant font-semibold uppercase">전체 제출률</p>
+          <p class="text-4xl font-bold text-primary mt-1">84.2%</p>
+          <div class="w-full bg-surface-variant h-1.5 rounded-full mt-3"><div class="bg-primary h-full" style="width:84.2%"></div></div>
+          <p class="text-xs text-on-surface-variant mt-1">전주 대비 2.1% 상승</p>
+        </div>
+        <div class="bg-white border border-outline-variant rounded-xl p-5 card-shadow">
+          <p class="text-xs text-on-surface-variant font-semibold uppercase">미처리 제출물</p>
+          <div class="flex items-center justify-between mt-1"><p class="text-4xl font-bold text-error" id="pending-cnt">2</p><span class="material-symbols-outlined text-error bg-error-container/20 p-2 rounded-full">pending_actions</span></div>
+          <p class="text-xs text-on-surface-variant mt-2">승인 대기 중</p>
+        </div>
+        <div class="bg-secondary-container border border-outline-variant rounded-xl p-5 card-shadow">
+          <p class="text-xs text-on-secondary-container font-semibold uppercase">활동 학생</p>
+          <div class="flex items-center justify-between mt-1"><p class="text-4xl font-bold text-on-secondary-container">128</p><span class="material-symbols-outlined text-on-secondary-container">group</span></div>
+          <p class="text-xs text-on-secondary-container mt-2">최근 24h 접속</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-outline-variant rounded-xl card-shadow overflow-hidden mb-6">
+        <div class="p-4 border-b border-outline-variant flex flex-wrap justify-between items-center gap-3">
+          <div class="flex items-center gap-3">
+            <h4 class="font-bold text-lg">주차별 과제 리스트</h4>
+            <div class="flex border border-outline-variant rounded-lg overflow-hidden text-xs">
+              <button onclick="filterT('all')" id="tf-all" class="px-3 py-1.5 bg-surface-variant font-bold">전체</button>
+              <button onclick="filterT('active')" id="tf-active" class="px-3 py-1.5 text-on-surface-variant hover:bg-surface-variant">진행중</button>
+              <button onclick="filterT('closed')" id="tf-closed" class="px-3 py-1.5 text-on-surface-variant hover:bg-surface-variant">마감</button>
+            </div>
+          </div>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+            <input type="text" id="tsearch" placeholder="과제명 검색..." oninput="renderTasks()" class="w-52 pl-9 pr-4 py-2 border border-outline-variant rounded-lg text-sm bg-surface"/>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead><tr class="bg-surface text-on-surface-variant font-semibold border-b border-outline-variant">
+              <th class="px-5 py-3">주차</th><th class="px-5 py-3">과제명</th><th class="px-5 py-3">마감일</th><th class="px-5 py-3">제출 현황</th><th class="px-5 py-3 text-center">상태</th><th class="px-5 py-3 text-right">관리</th>
+            </tr></thead>
+            <tbody id="ttable" class="divide-y divide-surface-variant"></tbody>
+          </table>
+        </div>
+        <div class="px-5 py-3 bg-surface border-t border-outline-variant text-xs text-on-surface-variant" id="t-count-text"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 bg-white border border-outline-variant rounded-xl card-shadow overflow-hidden">
+          <div class="p-4 border-b border-outline-variant flex justify-between items-center">
+            <h4 class="font-bold text-lg">미처리 제출물</h4>
+            <span class="text-xs px-3 py-1 bg-error/10 text-error rounded-full font-bold" id="sub-badge">2건 대기</span>
+          </div>
+          <div id="sub-list" class="divide-y divide-surface-variant max-h-96 overflow-y-auto cscroll"></div>
+        </div>
+        <div class="bg-primary text-white rounded-xl card-shadow p-5 flex flex-col gap-4">
+          <h4 class="font-bold text-lg">공지사항 및 안내</h4>
+          <div class="p-3 bg-white/10 rounded-lg text-sm"><p class="font-bold mb-1">시스템 정기 점검</p><p class="opacity-70 text-xs">2024-04-01 00:00 ~ 04:00</p></div>
+          <div class="p-3 bg-white/10 rounded-lg text-sm"><p class="font-bold mb-1">성적 산출 기준 변경</p><p class="opacity-70 text-xs">미제출 1회 시 최종 점수 5점 감점</p></div>
+          <div onclick="showToast('대량 과제 등록 기능은 준비 중입니다.')" class="mt-auto p-4 border-2 border-dashed border-white/30 rounded-xl bg-white/5 flex flex-col items-center text-center cursor-pointer hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-3xl mb-2">cloud_upload</span>
+            <p class="text-sm font-bold">대량 과제 등록</p>
+            <p class="text-[10px] opacity-60">Excel/CSV 드래그 앤 드롭</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== PAGE: NOTICES ==== -->
+    <div class="page p-6 lg:p-8" id="page-notices">
+      <div class="flex flex-wrap justify-between items-end mb-6 gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-primary">공지사항</h1>
+          <p class="text-sm text-on-surface-variant mt-1">인재양성학교의 주요 소식을 확인하세요.</p>
+        </div>
+        <button onclick="navigate('notice-write')" class="px-4 py-2 bg-primary text-white rounded-lg font-bold text-sm flex items-center gap-2 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-[18px]">edit</span>공지사항 작성
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white/80 border border-outline-variant p-4 rounded-xl flex justify-between items-center card-shadow">
+          <div><p class="text-xs text-on-surface-variant">전체 공지</p><p class="text-2xl font-bold mt-1" id="n-total">6</p></div>
+          <span class="material-symbols-outlined text-primary">article</span>
+        </div>
+        <div class="bg-white/80 border border-outline-variant border-l-4 border-l-error p-4 rounded-xl flex justify-between items-center card-shadow">
+          <div><p class="text-xs text-on-surface-variant">중요 공지</p><p class="text-2xl font-bold mt-1">2</p></div>
+          <span class="material-symbols-outlined text-error" style="font-variation-settings:'FILL' 1">push_pin</span>
+        </div>
+        <div class="bg-white/80 border border-outline-variant p-4 rounded-xl flex justify-between items-center card-shadow">
+          <div><p class="text-xs text-on-surface-variant">새 소식 (24h)</p><p class="text-2xl font-bold mt-1">1</p></div>
+          <span class="material-symbols-outlined text-secondary">new_releases</span>
+        </div>
+      </div>
+
+      <div class="bg-white border border-outline-variant rounded-t-xl p-3 flex flex-wrap justify-between items-center gap-3">
+        <div class="flex gap-2 flex-wrap" id="ncat-tabs">
+          <button onclick="filterN('')" class="n-cat on px-3 py-1.5 bg-primary-container text-on-primary-container rounded-full text-xs font-bold">전체</button>
+          <button onclick="filterN('EVENT')" class="n-cat px-3 py-1.5 hover:bg-surface-container text-on-surface-variant rounded-full text-xs">행사</button>
+          <button onclick="filterN('ADMIN')" class="n-cat px-3 py-1.5 hover:bg-surface-container text-on-surface-variant rounded-full text-xs">관리</button>
+          <button onclick="filterN('CAREER')" class="n-cat px-3 py-1.5 hover:bg-surface-container text-on-surface-variant rounded-full text-xs">취업/채용</button>
+          <button onclick="filterN('SCHOLARSHIP')" class="n-cat px-3 py-1.5 hover:bg-surface-container text-on-surface-variant rounded-full text-xs">장학</button>
+        </div>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
+          <input type="text" id="nsearch" placeholder="공지사항 검색..." class="pl-8 pr-4 py-2 bg-surface-container rounded-full border border-outline-variant text-xs w-52" oninput="filterN(currentNcat)"/>
+        </div>
+      </div>
+      <div class="bg-white border-x border-b border-outline-variant rounded-b-xl overflow-hidden card-shadow">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead><tr class="bg-surface-container-low border-b border-outline-variant text-on-surface-variant text-xs font-semibold">
+              <th class="py-3 px-4 w-12 text-center">No.</th><th class="py-3 px-4">제목</th><th class="py-3 px-4 w-28 text-center">작성일</th><th class="py-3 px-4 w-20 text-center">조회수</th><th class="py-3 px-4 w-16 text-center">관리</th>
+            </tr></thead>
+            <tbody id="ntable" class="divide-y divide-outline-variant"></tbody>
+          </table>
+        </div>
+        <div class="py-3 px-4 bg-surface flex justify-between items-center text-xs text-on-surface-variant border-t border-outline-variant">
+          <span id="n-count-text">전체 6건</span>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="relative overflow-hidden rounded-2xl bg-primary-container p-8 flex flex-col justify-end min-h-48 text-on-primary">
+          <div class="absolute top-3 right-3 opacity-10"><span class="material-symbols-outlined" style="font-size:100px">campaign</span></div>
+          <h3 class="text-xl font-bold mb-1">카카오톡 채널 안내</h3>
+          <p class="text-sm opacity-80 mb-4">GYTS 카카오톡 채널에서 실시간 소식을 확인하세요.</p>
+          <button onclick="showToast('카카오톡 채널로 이동합니다.')" class="self-start px-4 py-2 bg-white text-primary rounded-full font-bold text-sm hover:bg-primary-fixed transition-colors">채널 바로가기</button>
+        </div>
+        <div class="bg-white p-6 rounded-2xl flex items-center gap-4 border border-outline-variant card-shadow">
+          <div class="w-20 h-20 bg-secondary-container rounded-xl flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-secondary-container text-5xl">download_for_offline</span></div>
+          <div>
+            <h3 class="text-lg font-bold text-primary mb-1">서식 자료실</h3>
+            <p class="text-sm text-on-surface-variant mb-3">각종 서식 자료를 다운로드하세요.</p>
+            <button onclick="showToast('서식 자료실로 이동합니다.')" class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">자료실 이동 <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== PAGE: NOTICE WRITE ==== -->
+    <div class="page p-6 lg:p-8" id="page-notice-write">
+      <div class="flex flex-wrap justify-between items-end mb-6 gap-4">
+        <div>
+          <nav class="text-xs text-on-surface-variant flex gap-1 mb-1">
+            <button onclick="navigate('notices')" class="hover:text-primary">공지사항</button><span>/</span><span class="text-primary font-semibold">작성</span>
+          </nav>
+          <h1 class="text-2xl font-bold">공지사항 작성</h1>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="navigate('notices')" class="px-4 py-2 border border-outline text-primary font-bold rounded-lg text-sm hover:bg-surface-container-low">취소</button>
+          <button onclick="saveDraft()" class="px-4 py-2 border border-primary text-primary font-bold rounded-lg text-sm hover:bg-primary-fixed">임시 저장</button>
+          <button onclick="publishNotice()" class="px-5 py-2 bg-primary text-white font-bold rounded-lg text-sm hover:opacity-90 shadow">발행하기</button>
+        </div>
+      </div>
+      <div class="bg-white border border-outline-variant rounded-xl p-6 card-shadow space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div><label class="block font-semibold text-sm mb-2">카테고리</label>
+            <select id="nw-cat" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm"><option value="">일반 공지</option><option value="EVENT">이벤트</option><option value="CAREER">채용/커리어</option><option value="SCHOLARSHIP">장학 정보</option></select></div>
+          <div class="flex items-center gap-3 pt-6">
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input class="sr-only peer" type="checkbox" id="nw-pin"/>
+              <div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+              <span class="ml-3 text-sm font-semibold">상단 고정</span>
+            </label>
+          </div>
+        </div>
+        <div><label class="block font-semibold text-sm mb-2">제목 <span class="text-error">*</span></label>
+          <input id="nw-title" type="text" placeholder="제목 입력" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm"/></div>
+        <div>
+          <label class="block font-semibold text-sm mb-2">대상</label>
+          <div class="flex flex-wrap gap-2">
+            <label class="flex items-center gap-2 cursor-pointer border border-primary bg-primary-fixed px-4 py-2 rounded-full text-sm"><input checked class="w-4 h-4 text-primary" name="aud" type="radio" value="전체"/><span class="font-bold text-primary">전체</span></label>
+            <label class="flex items-center gap-2 cursor-pointer border border-outline-variant px-4 py-2 rounded-full text-sm hover:bg-surface-variant"><input class="w-4 h-4 text-primary" name="aud" type="radio" value="1기"/><span class="text-on-surface-variant">1기</span></label>
+            <label class="flex items-center gap-2 cursor-pointer border border-outline-variant px-4 py-2 rounded-full text-sm hover:bg-surface-variant"><input class="w-4 h-4 text-primary" name="aud" type="radio" value="2기"/><span class="text-on-surface-variant">2기</span></label>
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-sm mb-2">본문 <span class="text-error">*</span></label>
+          <div class="border border-outline-variant rounded-xl overflow-hidden">
+            <div class="bg-surface-container-low border-b border-outline-variant p-2 flex gap-1 flex-wrap">
+              <button type="button" onclick="document.execCommand('bold')" class="p-1.5 hover:bg-surface-variant rounded text-on-surface-variant" title="굵게"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+              <button type="button" onclick="document.execCommand('italic')" class="p-1.5 hover:bg-surface-variant rounded text-on-surface-variant" title="기울임"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+              <button type="button" onclick="document.execCommand('insertUnorderedList')" class="p-1.5 hover:bg-surface-variant rounded text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+              <button type="button" onclick="document.execCommand('insertOrderedList')" class="p-1.5 hover:bg-surface-variant rounded text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">format_list_numbered</span></button>
+              <div class="w-px h-6 bg-outline-variant mx-1"></div>
+              <button type="button" onclick="insertLink()" class="p-1.5 hover:bg-surface-variant rounded text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">link</span></button>
+            </div>
+            <div id="nw-body" contenteditable="true" class="w-full p-4 bg-white min-h-48 text-sm outline-none" style="min-height:200px"></div>
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-sm mb-2">첨부 파일</label>
+          <div id="nw-drop" class="border-2 border-dashed border-outline-variant bg-surface-container-low rounded-xl p-10 flex flex-col items-center gap-2 cursor-pointer hover:bg-surface-variant transition-colors">
+            <span class="material-symbols-outlined text-primary text-4xl">cloud_upload</span>
+            <p class="text-sm font-bold">파일을 드래그하거나 클릭하여 선택</p>
+            <p class="text-xs text-on-surface-variant">PDF, DOCX, ZIP, JPG, PNG (최대 20MB)</p>
+            <input type="file" multiple class="hidden" id="nw-file"/>
+          </div>
+          <div id="nw-files" class="mt-3 space-y-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== PAGE: MYPAGE ==== -->
+    <div class="page p-6 lg:p-8" id="page-mypage">
+      <div class="mb-6">
+        <h2 class="text-3xl font-bold text-primary">안녕하세요, <span id="my-username">김경북</span>님!</h2>
+        <p class="text-base text-on-surface-variant mt-1">오늘도 당신의 꿈을 향한 한 걸음을 응원합니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-white border border-outline-variant rounded-xl p-5 card-shadow flex flex-col justify-between">
+          <div>
+            <p class="text-xs text-on-surface-variant font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[16px]">calendar_today</span>현재 출석률</p>
+            <div class="flex items-baseline gap-2 mt-2"><span class="text-4xl font-bold text-primary">92%</span><span class="text-xs text-secondary font-semibold">평균 이상</span></div>
+          </div>
+          <div class="mt-4"><div class="w-full bg-surface-container-highest h-2 rounded-full"><div class="bg-primary h-full rounded-full" style="width:92%"></div></div><p class="text-xs text-on-surface-variant mt-1 text-right">목표 100%까지 8% 남음</p></div>
+        </div>
+        <div class="md:col-span-2 bg-white border border-outline-variant rounded-xl p-5 card-shadow">
+          <p class="text-xs text-on-surface-variant font-semibold flex items-center gap-1 mb-3"><span class="material-symbols-outlined text-primary text-[16px]">assignment_turned_in</span>나의 과제 현황</p>
+          <div class="grid grid-cols-4 gap-3">
+            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">전체</p><p class="text-2xl font-bold text-primary">12</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">제출 완료</p><p class="text-2xl font-bold text-secondary">8</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center"><p class="text-xs text-on-surface-variant">검토 중</p><p class="text-2xl font-bold text-tertiary">2</p></div>
+            <div class="p-3 bg-surface-container-low rounded-lg text-center border-2 border-primary-fixed"><p class="text-xs text-primary font-bold">미제출</p><p class="text-2xl font-bold text-error">2</p></div>
+          </div>
+          <div class="mt-3 p-3 bg-primary-fixed text-on-primary-fixed rounded-lg flex items-center justify-between text-sm">
+            <p>이번 주 마감 과제 <span class="font-bold underline">1건</span> 있습니다.</p>
+            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+          </div>
+        </div>
+        <div class="md:col-span-3 bg-white border border-outline-variant rounded-xl p-5 card-shadow">
+          <p class="text-xs text-on-surface-variant font-semibold mb-3">최근 활동 내역</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 py-2 border-b border-surface-container-high">
+              <div class="w-10 h-10 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">check_circle</span></div>
+              <div><p class="text-sm font-semibold">'자기소개서 첨삭 과제' 제출이 승인되었습니다.</p><p class="text-xs text-on-surface-variant">2시간 전</p></div>
+            </div>
+            <div class="flex items-center gap-3 py-2">
+              <div class="w-10 h-10 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">notifications_active</span></div>
+              <div><p class="text-sm font-semibold">새로운 공지사항: '6월 현장 견학 일정 안내'가 등록되었습니다.</p><p class="text-xs text-on-surface-variant">어제</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold">주차별 과제 목록</h3>
+            <button onclick="navigate('tasks')" class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline">전체보기 <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+          </div>
+          <div class="bg-white border border-outline-variant p-5 rounded-xl card-shadow flex flex-wrap items-center justify-between gap-4">
+            <div class="flex-1 min-w-48">
+              <div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded font-bold">10주차</span><span class="px-2 py-0.5 rounded-full text-[11px] bg-secondary/10 text-secondary font-semibold">승인 완료</span></div>
+              <p class="font-semibold text-sm">창업 아이디어 피칭 데크 수정본</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">제출일: 2024.05.20 14:30</p>
+            </div>
+            <button onclick="showToast('수정 기능은 준비 중입니다.')" class="px-4 py-2 border border-primary text-primary font-bold rounded-lg text-sm hover:bg-primary-fixed">수정하기</button>
+          </div>
+          <div class="bg-primary/5 border-2 border-primary p-5 rounded-xl card-shadow flex flex-wrap items-center justify-between gap-4">
+            <div class="flex-1 min-w-48">
+              <div class="flex items-center gap-2 mb-1"><span class="px-2 py-0.5 bg-primary text-white text-[10px] rounded font-bold">11주차</span><span class="px-2 py-0.5 rounded-full text-[11px] bg-error/10 text-error font-semibold">제출 대기</span></div>
+              <p class="font-bold text-sm">마케팅 믹스(4P) 분석 보고서</p>
+              <p class="text-xs text-error font-semibold mt-0.5">마감 임박: D-1 (5월 26일)</p>
+            </div>
+            <button onclick="openModal('modal-upload')" class="px-4 py-2 bg-primary text-white font-bold rounded-lg text-sm hover:opacity-90">과제 제출하기</button>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary-container p-5 rounded-xl card-shadow text-on-primary-container">
+            <h3 class="text-lg font-bold mb-1">실시간 소통 창구</h3>
+            <p class="text-sm opacity-80 mb-4">카카오톡 오픈채팅방에서 소통하세요.</p>
+            <button onclick="showToast('카카오톡 오픈채팅방으로 이동합니다.')" class="w-full py-2.5 bg-white text-primary text-center font-bold rounded-xl text-sm hover:shadow-md transition-shadow flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">forum</span>오픈채팅방 입장하기
+            </button>
+          </div>
+          <div class="bg-white border border-outline-variant p-5 rounded-xl card-shadow">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-sm">중요 공지사항</h3>
+              <button onclick="navigate('notices')" class="material-symbols-outlined text-on-surface-variant hover:text-primary text-[20px]">more_horiz</button>
+            </div>
+            <ul class="space-y-3">
+              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-primary mb-0.5">2024.05.24</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">[긴급] 6월 전문가 멘토링 시간 변경</p></button></li>
+              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-on-surface-variant mb-0.5">2024.05.22</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">포트폴리오 경진대회 안내</p></button></li>
+              <li><button onclick="navigate('notices')" class="group text-left w-full"><p class="text-xs text-on-surface-variant mb-0.5">2024.05.18</p><p class="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-1">여름방학 인턴십 연계 기업 업데이트</p></button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="ml-64 py-4 px-8 flex flex-wrap justify-between items-center gap-3 bg-white border-t border-outline-variant text-xs text-on-surface-variant" style="margin-left:256px">
+    <div class="flex items-center gap-4"><span class="font-bold text-primary">경북 청년인재스쿨</span><span>© 2024 All rights reserved.</span></div>
+    <div class="flex gap-4">
+      <button onclick="showToast('개인정보처리방침')" class="hover:text-primary">개인정보처리방침</button>
+      <button onclick="showToast('이용약관')" class="hover:text-primary">이용약관</button>
+      <button onclick="showToast('문의하기')" class="hover:text-primary">문의하기</button>
+    </div>
+  </footer>
+</div>
+
+<!-- ======= MODALS ======= -->
+<!-- Upload Modal -->
+<div class="modal-wrap" id="modal-upload">
+  <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden">
+    <div class="p-5 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+      <h3 class="font-bold text-lg">과제 제출하기</h3>
+      <button onclick="closeModal('modal-upload')" class="p-1 hover:bg-surface-variant rounded-full"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="p-6 space-y-5">
+      <div><label class="block text-sm font-semibold mb-2">과제명</label>
+        <input disabled type="text" value="마케팅 믹스(4P) 분석 보고서" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm bg-surface-container-highest text-on-surface-variant"/></div>
+      <div>
+        <label class="block text-sm font-semibold mb-2">파일 업로드</label>
+        <div id="up-drop" class="border-2 border-dashed border-primary bg-[#E8F1FA] rounded-xl p-10 text-center cursor-pointer hover:bg-primary-fixed transition-colors">
+          <span class="material-symbols-outlined text-primary text-4xl">cloud_upload</span>
+          <p class="text-sm font-bold text-primary mt-2">파일을 드래그하거나 클릭하세요</p>
+          <p class="text-xs text-on-surface-variant mt-1">PDF, DOCX, ZIP (최대 50MB)</p>
+          <input type="file" multiple class="hidden" id="up-file"/>
+        </div>
+        <div id="up-files" class="mt-3 space-y-2"></div>
+      </div>
+      <div><label class="block text-sm font-semibold mb-2">참고 링크 (선택)</label>
+        <input type="url" placeholder="https://..." class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm"/></div>
+      <button onclick="doSubmitTask()" class="w-full py-3 bg-primary text-white font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all">제출 완료하기</button>
     </div>
   </div>
 </div>
+
+<!-- New Task Modal -->
+<div class="modal-wrap" id="modal-new-task">
+  <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden">
+    <div class="p-5 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+      <h3 class="font-bold text-lg">신규 과제 등록</h3>
+      <button onclick="closeModal('modal-new-task')" class="p-1 hover:bg-surface-variant rounded-full"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="p-6 space-y-4">
+      <div><label class="block text-sm font-semibold mb-1">주차</label><input id="nt-week" type="text" placeholder="예: 12주차" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm"/></div>
+      <div><label class="block text-sm font-semibold mb-1">과제명</label><input id="nt-name" type="text" placeholder="과제 제목" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm"/></div>
+      <div><label class="block text-sm font-semibold mb-1">마감일</label><input id="nt-due" type="date" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-sm"/></div>
+      <button onclick="addTask()" class="w-full py-3 bg-primary text-white font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all">등록하기</button>
+    </div>
+  </div>
 </div>
 
-</main>
-</div>
-
-<footer class="ml-64 w-full py-md px-lg flex flex-col md:flex-row justify-between items-center gap-xs border-t border-outline-variant bg-surface">
-  <div class="flex flex-col md:flex-row items-center gap-md">
-    <span class="font-label-lg text-label-lg font-bold text-primary">경북 청년인재스쿨</span>
-    <p class="text-on-surface-variant font-label-sm text-label-sm">© 2024 Gyeongbuk Youth Talent School. All rights reserved.</p>
-  </div>
-  <div class="flex gap-md">
-    <button onclick="showToast('개인정보처리방침 페이지입니다.')" class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors">개인정보처리방침</button>
-    <button onclick="showToast('이용약관 페이지입니다.')" class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors">이용약관</button>
-    <button onclick="showToast('문의하기 페이지입니다.')" class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors">문의하기</button>
-  </div>
-</footer>
-
+<!-- ======= SCRIPT ======= -->
 <script>
-// ==================== LOGIN ====================
-const ACCOUNTS = {
-  admin: { password: '1234', role: 'admin', displayName: '홍길동 매니저' },
-  user:  { password: '1234', role: 'user',  displayName: '김경북' },
+// ─── DATA ────────────────────────────────────────────────
+let accounts = {
+  admin:{ pw:'1234', role:'admin', name:'홍길동 매니저' },
+  user: { pw:'1234', role:'user',  name:'김경북' },
 };
-let loginTab = 'admin';
-
-function switchLoginTab(tab) {
-  loginTab = tab;
-  document.getElementById('tab-admin').className = 'login-tab flex-1 py-md text-label-lg font-bold text-center rounded-none ' + (tab==='admin' ? 'active' : 'text-on-surface-variant');
-  document.getElementById('tab-user').className  = 'login-tab flex-1 py-md text-label-lg font-bold text-center rounded-none ' + (tab==='user'  ? 'active' : 'text-on-surface-variant');
-  document.getElementById('login-id').value = '';
-  document.getElementById('login-pw').value = '';
-  hideLoginError();
-}
-
-function togglePw() {
-  const input = document.getElementById('login-pw');
-  const eye   = document.getElementById('pw-eye');
-  if (input.type === 'password') { input.type = 'text'; eye.textContent = 'visibility'; }
-  else { input.type = 'password'; eye.textContent = 'visibility_off'; }
-}
-
-function showLoginError(msg) {
-  const el = document.getElementById('login-error');
-  document.getElementById('login-error-msg').textContent = msg;
-  el.classList.remove('hidden');
-  el.style.display = 'flex';
-}
-function hideLoginError() {
-  const el = document.getElementById('login-error');
-  el.classList.add('hidden');
-  el.style.display = '';
-}
-
-function handleLogin(e) {
-  e.preventDefault();
-  const id = document.getElementById('login-id').value.trim();
-  const pw = document.getElementById('login-pw').value;
-  hideLoginError();
-
-  if (!id) { showLoginError('아이디를 입력하세요.'); return; }
-  if (!pw)  { showLoginError('비밀번호를 입력하세요.'); return; }
-
-  const account = ACCOUNTS[id];
-  if (!account) { showLoginError('존재하지 않는 아이디입니다.'); return; }
-  if (account.password !== pw) { showLoginError('비밀번호가 올바르지 않습니다.'); return; }
-  if (account.role !== loginTab) {
-    showLoginError(`이 계정은 ${account.role==='admin'?'관리자':'참여자'} 로그인 탭을 이용해주세요.`);
-    return;
-  }
-
-  // Animate button
-  const btn = document.getElementById('login-btn');
-  btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>로그인 중...</span>';
-  btn.disabled = true;
-
-  setTimeout(() => {
-    // Update header
-    document.getElementById('header-username').textContent = account.displayName;
-    document.getElementById('header-role-icon').textContent = account.role==='admin' ? 'manage_accounts' : 'person';
-    // Hide login screen
-    document.getElementById('login-screen').classList.add('hidden');
-    // Set role & navigate
-    setRole(account.role);
-    btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">login</span><span>로그인</span>';
-    btn.disabled = false;
-    showToast(`${account.displayName}님, 환영합니다! 🎉`);
-  }, 700);
-}
-
-function logout() {
-  document.getElementById('login-id').value = '';
-  document.getElementById('login-pw').value = '';
-  hideLoginError();
-  document.getElementById('login-screen').classList.remove('hidden');
-  switchLoginTab('admin');
-}
-
-function showToastOnLogin(msg) { showToast(msg); }
-
-// ==================== DATA ====================
-const participants = [
-  { id:1, name:'김철수', initials:'김철', contact:'010-1234-5678', team:'A팀', cohort:'4기', attendance:78, tasks:'12/15', tasksDone:12, tasksTotal:15, lastCounsel:'2024.05.15', daysAgo:10, bgColor:'bg-primary-fixed', textColor:'text-on-primary-fixed-variant', status:'active' },
-  { id:2, name:'이영희', initials:'이영', contact:'010-8765-4321', team:'B팀', cohort:'4기', attendance:95, tasks:'15/15', tasksDone:15, tasksTotal:15, lastCounsel:'2024.04.10', daysAgo:35, bgColor:'bg-tertiary-fixed', textColor:'text-on-tertiary-fixed-variant', status:'active' },
-  { id:3, name:'박민준', initials:'박민', contact:'010-5555-4444', team:'A팀', cohort:'4기', attendance:88, tasks:'10/15', tasksDone:10, tasksTotal:15, lastCounsel:'2024.05.20', daysAgo:5, bgColor:'bg-secondary-fixed', textColor:'text-on-secondary-fixed-variant', status:'active' },
-  { id:4, name:'최수진', initials:'최수', contact:'010-1111-2222', team:'C팀', cohort:'4기', attendance:100, tasks:'15/15', tasksDone:15, tasksTotal:15, lastCounsel:'2024.05.22', daysAgo:3, bgColor:'bg-primary-fixed', textColor:'text-on-primary-fixed-variant', status:'active' },
-];
-
-const memos = {
-  1: [
-    { type:'대면 상담', date:'2024.05.15 14:20', content:'출석률 저하와 관련하여 면담 진행. 최근 자격증 시험 준비로 인해 결석이 잦아졌음을 확인. 시험 종료 후 정상 출석 약속함.', author:'홍길동 매니저', typeBg:'bg-primary-fixed', typeText:'text-on-primary-fixed-variant' },
-    { type:'유선 연락', date:'2024.05.02 10:15', content:'단기 프로젝트 과제 지연 제출에 대한 확인 전화. 자료 보완 후 금일 중 재제출하기로 함.', author:'김지연 팀장', typeBg:'bg-surface-container-high', typeText:'text-on-surface-variant' },
-  ],
-  2: [
-    { type:'유선 연락', date:'2024.04.08 11:00', content:'출석 우수 및 과제 완료 칭찬 전화. 멘토링 프로그램 참여 독려함.', author:'홍길동 매니저', typeBg:'bg-surface-container-high', typeText:'text-on-surface-variant' },
-  ],
-  3: [
-    { type:'대면 상담', date:'2024.05.18 15:00', content:'과제 미제출 건 확인. 개인 사정으로 인한 지연이며, 이번 주 내 제출 약속.', author:'김지연 팀장', typeBg:'bg-primary-fixed', typeText:'text-on-primary-fixed-variant' },
-  ],
-  4: [],
-};
-
-const tasks = [
-  { id:1, week:'1주차', name:'지역 문제 해결 아이디어 기획안', category:'창의적 사고와 기획', dueDate:'2024-03-15', submitted:124, total:128, approved:120, rejected:4, status:'closed' },
-  { id:2, week:'2주차', name:'데이터 분석 기초 실습 보고서', category:'디지털 역량 강화', dueDate:'2024-03-22', submitted:82, total:128, approved:12, rejected:0, status:'active' },
-  { id:3, week:'3주차', name:'현장 실습 일지 #1', category:'산업 밀착형 실무', dueDate:'진행중', submitted:15, total:128, approved:0, rejected:0, status:'active' },
-];
-
-const submissions = [
-  { id:1, filename:'김민수_지역문제기획_ver2.pdf', submitter:'김민수', team:'A반', date:'2024-03-23 14:20', size:'2.4MB', taskId:2 },
-  { id:2, filename:'이영희_중간기획안_수정본.docx', submitter:'이영희', team:'B반', date:'2024-03-23 15:45', size:'1.1MB', taskId:2 },
-];
-
-const notices = [
-  { id:'pin1', pinned:true, important:true, title:'2024년 경북 청년 인재양성학교 동계 오리엔테이션 일정 안내', date:'2024.11.24', views:1245, category:'', hasAttachment:true },
-  { id:'pin2', pinned:true, important:true, title:'필수 개인정보 이용 동의서 제출 (미제출 시 수당 지급 불가)', date:'2024.11.22', views:3102, category:'', hasAttachment:false },
-  { id:1, pinned:false, important:false, title:'12월 청년 네트워킹 데이 Dream Connect 참가자 모집', date:'2024.11.23', views:452, category:'EVENT', isNew:true },
-  { id:2, pinned:false, important:false, title:'시스템 점검에 따른 포털 접속 일시 중단 안내 (11/25)', date:'2024.11.23', views:89, category:'ADMIN' },
-  { id:3, pinned:false, important:false, title:'경북 지역 우수 기업 인턴십 매칭 데이 현장 스케치', date:'2024.11.20', views:672, category:'CAREER', hasAttachment:true },
-  { id:4, pinned:false, important:false, title:'2학기 성적 우수 장학금 수혜 대상자 명단 공고', date:'2024.11.18', views:2143, category:'SCHOLARSHIP' },
-];
-
-// ==================== STATE ====================
+let currentUser = null;
 let currentPage = 'admin-dashboard';
-let currentRole = 'admin';
-let selectedParticipantId = 1;
-let currentParticipantFilter = 'all';
-let currentTaskFilter = 'all';
-let currentNoticeFilter = '';
-let currentNoticeSearch = '';
-let activeSubmissions = [...submissions];
+let selParticipant = 1;
+let pFilter = 'all';
+let tFilter = 'all';
+let currentNcat = '';
 
-// ==================== ROUTER ====================
-const adminPages = [
-  { id:'admin-dashboard', label:'대시보드', icon:'dashboard' },
-  { id:'participants', label:'참여자 관리', icon:'groups' },
-  { id:'tasks', label:'과제 관리', icon:'assignment' },
-  { id:'notices', label:'공지사항', icon:'campaign' },
+const PARTICIPANTS = [
+  {id:1,name:'김철수',ini:'김철',contact:'010-1234-5678',team:'A팀',cohort:'4기',att:78,tasks:'12/15',td:12,tt:15,last:'2024.05.15',days:10,bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
+  {id:2,name:'이영희',ini:'이영',contact:'010-8765-4321',team:'B팀',cohort:'4기',att:95,tasks:'15/15',td:15,tt:15,last:'2024.04.10',days:35,bg:'bg-tertiary-fixed',fg:'text-on-tertiary-fixed-variant'},
+  {id:3,name:'박민준',ini:'박민',contact:'010-5555-4444',team:'A팀',cohort:'4기',att:88,tasks:'10/15',td:10,tt:15,last:'2024.05.20',days:5,bg:'bg-secondary-fixed',fg:'text-on-secondary-fixed-variant'},
+  {id:4,name:'최수진',ini:'최수',contact:'010-1111-2222',team:'C팀',cohort:'4기',att:100,tasks:'15/15',td:15,tt:15,last:'2024.05.22',days:3,bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
 ];
-const userPages = [
-  { id:'mypage', label:'마이페이지', icon:'dashboard' },
-  { id:'tasks', label:'과제 제출', icon:'assignment' },
-  { id:'notices', label:'공지사항', icon:'campaign' },
+const MEMOS = {
+  1:[{type:'대면 상담',date:'2024.05.15 14:20',txt:'출석률 저하 면담. 자격증 시험 준비로 결석이 잦아졌음. 시험 후 정상 출석 약속.',author:'홍길동 매니저',bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'},
+     {type:'유선 연락',date:'2024.05.02 10:15',txt:'과제 지연 제출 확인 전화. 금일 중 재제출하기로 함.',author:'김지연 팀장',bg:'bg-surface-container-high',fg:'text-on-surface-variant'}],
+  2:[{type:'유선 연락',date:'2024.04.08 11:00',txt:'출석 우수 및 과제 완료 칭찬. 멘토링 프로그램 참여 독려.',author:'홍길동 매니저',bg:'bg-surface-container-high',fg:'text-on-surface-variant'}],
+  3:[{type:'대면 상담',date:'2024.05.18 15:00',txt:'과제 미제출 확인. 개인 사정으로 인한 지연, 이번 주 내 제출 약속.',author:'김지연 팀장',bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'}],
+  4:[],
+};
+let TASKS = [
+  {id:1,week:'1주차',name:'지역 문제 해결 아이디어 기획안',cat:'창의적 사고',due:'2024-03-15',sub:124,tot:128,appr:120,rej:4,status:'closed'},
+  {id:2,week:'2주차',name:'데이터 분석 기초 실습 보고서',cat:'디지털 역량',due:'2024-03-22',sub:82,tot:128,appr:12,rej:0,status:'active'},
+  {id:3,week:'3주차',name:'현장 실습 일지 #1',cat:'산업 밀착형 실무',due:'진행중',sub:15,tot:128,appr:0,rej:0,status:'active'},
+];
+let SUBS = [
+  {id:1,file:'김민수_지역문제기획_ver2.pdf',submitter:'김민수',team:'A반',date:'2024-03-23 14:20',size:'2.4MB'},
+  {id:2,file:'이영희_중간기획안_수정본.docx',submitter:'이영희',team:'B반',date:'2024-03-23 15:45',size:'1.1MB'},
+];
+let NOTICES = [
+  {id:'p1',pin:true,imp:true,title:'2024년 경북 청년 인재양성학교 동계 오리엔테이션 일정 안내',date:'2024.11.24',views:1245,cat:'',att:true},
+  {id:'p2',pin:true,imp:true,title:'필수 개인정보 이용 동의서 제출 (미제출 시 수당 지급 불가)',date:'2024.11.22',views:3102,cat:'',att:false},
+  {id:1,pin:false,imp:false,title:'12월 청년 네트워킹 데이 Dream Connect 참가자 모집',date:'2024.11.23',views:452,cat:'EVENT',isNew:true},
+  {id:2,pin:false,imp:false,title:'시스템 점검에 따른 포털 접속 일시 중단 안내',date:'2024.11.23',views:89,cat:'ADMIN'},
+  {id:3,pin:false,imp:false,title:'경북 지역 우수 기업 인턴십 매칭 데이 현장 스케치',date:'2024.11.20',views:672,cat:'CAREER',att:true},
+  {id:4,pin:false,imp:false,title:'2학기 성적 우수 장학금 수혜 대상자 명단 공고',date:'2024.11.18',views:2143,cat:'SCHOLARSHIP'},
 ];
 
-function setRole(role) {
-  currentRole = role;
-  document.getElementById('btn-role-admin').className = 'px-sm py-1 rounded-full text-label-sm font-bold transition-colors ' + (role==='admin' ? 'bg-primary text-on-primary' : 'text-on-surface-variant');
-  document.getElementById('btn-role-user').className = 'px-sm py-1 rounded-full text-label-sm font-bold transition-colors ' + (role==='user' ? 'bg-primary text-on-primary' : 'text-on-surface-variant');
-  document.getElementById('site-title').textContent = role==='admin' ? '경북 청년인재스쿨 관리자' : '경북 청년인재스쿨';
-  document.getElementById('sidebar-title').textContent = role==='admin' ? '포털 관리' : '마이 메뉴';
-  document.getElementById('sidebar-cta').style.display = role==='admin' ? '' : 'none';
+// ─── TOAST ───────────────────────────────────────────────
+let _tTimer;
+function showToast(msg){
+  document.getElementById('toast-msg').textContent=msg;
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(_tTimer);
+  _tTimer=setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+// ─── MODAL ───────────────────────────────────────────────
+function openModal(id){ document.getElementById(id).classList.add('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+document.addEventListener('click',e=>{
+  ['modal-upload','modal-new-task'].forEach(id=>{
+    const m=document.getElementById(id);
+    if(m&&e.target===m) closeModal(id);
+  });
+});
+
+// ─── AUTH ─────────────────────────────────────────────────
+let loginRole='admin';
+let authMode='login';
+
+function switchAuthMode(mode){
+  authMode=mode;
+  document.getElementById('panel-login').classList.toggle('hidden', mode!=='login');
+  document.getElementById('panel-signup').classList.toggle('hidden', mode!=='signup');
+  document.getElementById('mode-login').className='auth-tab '+(mode==='login'?'on':'off')+' flex-1 py-4 text-sm font-bold flex items-center justify-center gap-1';
+  document.getElementById('mode-signup').className='auth-tab '+(mode==='signup'?'on':'off')+' flex-1 py-4 text-sm font-bold flex items-center justify-center gap-1';
+}
+function switchLoginRole(r){
+  loginRole=r;
+  ['admin','user'].forEach(x=>{
+    document.getElementById('role-'+x).className='auth-tab '+(r===x?'on':'off')+' flex-1 py-2 text-sm font-bold flex items-center justify-center gap-1';
+  });
+}
+function togglePw(inputId,eyeId){
+  const i=document.getElementById(inputId);
+  const e=document.getElementById(eyeId);
+  if(i.type==='password'){i.type='text';e.textContent='visibility';}
+  else{i.type='password';e.textContent='visibility_off';}
+}
+function showAuthErr(panel,msg){
+  const el=document.getElementById(panel+'-err');
+  document.getElementById(panel+'-err-msg').textContent=msg;
+  el.classList.remove('hidden');
+  el.style.display='flex';
+}
+function hideAuthErr(panel){
+  const el=document.getElementById(panel+'-err');
+  if(el){el.classList.add('hidden');el.style.display='';}
+}
+
+function doLogin(){
+  hideAuthErr('login');
+  const id=document.getElementById('login-id').value.trim();
+  const pw=document.getElementById('login-pw').value;
+  if(!id){showAuthErr('login','아이디를 입력하세요.');return;}
+  if(!pw){showAuthErr('login','비밀번호를 입력하세요.');return;}
+  const acc=accounts[id];
+  if(!acc){showAuthErr('login','존재하지 않는 아이디입니다.');return;}
+  if(acc.pw!==pw){showAuthErr('login','비밀번호가 올바르지 않습니다.');return;}
+  if(acc.role!==loginRole){
+    showAuthErr('login',`이 계정은 "${acc.role==='admin'?'관리자':'참여자'}" 탭으로 로그인해주세요.`);return;
+  }
+  const btn=document.getElementById('login-btn');
+  btn.innerHTML='<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>로그인 중...</span>';
+  btn.disabled=true;
+  setTimeout(()=>{
+    currentUser={...acc,id};
+    document.getElementById('hdr-name').textContent=acc.name;
+    document.getElementById('hdr-icon').textContent=acc.role==='admin'?'manage_accounts':'person';
+    document.getElementById('site-title').textContent=acc.role==='admin'?'경북 청년인재스쿨 관리자':'경북 청년인재스쿨';
+    if(acc.role==='user'){
+      document.getElementById('my-username').textContent=acc.name;
+    }
+    document.getElementById('auth-screen').classList.add('gone');
+    document.getElementById('app-shell').classList.add('show');
+    setRole(acc.role);
+    btn.innerHTML='<span class="material-symbols-outlined text-[20px]">login</span><span>로그인</span>';
+    btn.disabled=false;
+    showToast(`${acc.name}님, 환영합니다!`);
+  },600);
+}
+
+function doSignup(){
+  hideAuthErr('signup');
+  const name=document.getElementById('su-name').value.trim();
+  const cohort=document.getElementById('su-cohort').value;
+  const team=document.getElementById('su-team').value;
+  const phone=document.getElementById('su-phone').value.trim();
+  const id=document.getElementById('su-id').value.trim();
+  const pw=document.getElementById('su-pw').value;
+  const pw2=document.getElementById('su-pw2').value;
+  const agree=document.getElementById('su-agree').checked;
+  if(!name){showAuthErr('signup','이름을 입력하세요.');return;}
+  if(!cohort){showAuthErr('signup','기수를 선택하세요.');return;}
+  if(!team){showAuthErr('signup','팀을 선택하세요.');return;}
+  if(!phone){showAuthErr('signup','연락처를 입력하세요.');return;}
+  if(!id||id.length<4){showAuthErr('signup','아이디는 4자 이상이어야 합니다.');return;}
+  if(accounts[id]){showAuthErr('signup','이미 사용 중인 아이디입니다.');return;}
+  if(!pw||pw.length<8){showAuthErr('signup','비밀번호는 8자 이상이어야 합니다.');return;}
+  if(pw!==pw2){showAuthErr('signup','비밀번호가 일치하지 않습니다.');return;}
+  if(!agree){showAuthErr('signup','개인정보 처리방침에 동의해주세요.');return;}
+  // Register
+  accounts[id]={pw,role:'user',name};
+  PARTICIPANTS.push({id:PARTICIPANTS.length+1,name,ini:name.substring(0,2),contact:phone,team,cohort,att:100,tasks:'0/15',td:0,tt:15,last:'-',days:0,bg:'bg-primary-fixed',fg:'text-on-primary-fixed-variant'});
+  showToast(`${name}님, 회원가입이 완료되었습니다! 로그인해주세요.`);
+  // Clear & switch to login
+  ['su-name','su-id','su-pw','su-pw2','su-phone'].forEach(x=>document.getElementById(x).value='');
+  document.getElementById('su-cohort').value='';
+  document.getElementById('su-team').value='';
+  document.getElementById('su-agree').checked=false;
+  switchAuthMode('login');
+  switchLoginRole('user');
+  document.getElementById('login-id').value=id;
+}
+
+function doLogout(){
+  currentUser=null;
+  document.getElementById('auth-screen').classList.remove('gone');
+  document.getElementById('app-shell').classList.remove('show');
+  document.getElementById('login-id').value='';
+  document.getElementById('login-pw').value='';
+  hideAuthErr('login');
+  switchAuthMode('login');
+  showToast('로그아웃되었습니다.');
+}
+
+// ─── NAVIGATION ──────────────────────────────────────────
+const ADMIN_PAGES=[
+  {id:'admin-dashboard',label:'대시보드',icon:'dashboard'},
+  {id:'participants',label:'참여자 관리',icon:'groups'},
+  {id:'tasks',label:'과제 관리',icon:'assignment'},
+  {id:'notices',label:'공지사항',icon:'campaign'},
+];
+const USER_PAGES=[
+  {id:'mypage',label:'마이페이지',icon:'dashboard'},
+  {id:'tasks',label:'과제 제출',icon:'assignment'},
+  {id:'notices',label:'공지사항',icon:'campaign'},
+];
+
+function setRole(role){
+  const pages=role==='admin'?ADMIN_PAGES:USER_PAGES;
+  document.getElementById('sb-title').textContent=role==='admin'?'포털 관리':'마이 메뉴';
+  document.getElementById('sb-cta').style.display=role==='admin'?'':'none';
+  navigate(role==='admin'?'admin-dashboard':'mypage');
+}
+
+function renderSidebar(){
+  const pages=currentUser?.role==='admin'?ADMIN_PAGES:USER_PAGES;
+  document.getElementById('sb-nav').innerHTML=pages.map(p=>`
+    <button onclick="navigate('${p.id}')" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors ${currentPage===p.id?'nav-active':'text-on-surface-variant hover:bg-surface-variant'}">
+      <span class="material-symbols-outlined text-[20px]">${p.icon}</span>${p.label}
+    </button>`).join('');
+}
+
+function navigate(pageId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const t=document.getElementById('page-'+pageId);
+  if(t){t.classList.add('active');currentPage=pageId;}
+  document.getElementById('main-area').scrollTop=0;
   renderSidebar();
-  navigate(role==='admin' ? 'admin-dashboard' : 'mypage');
+  if(pageId==='admin-dashboard'){renderPTable();renderMemoList(selParticipant);}
+  if(pageId==='participants'){renderPFull();}
+  if(pageId==='tasks'){renderTasks();renderSubs();}
+  if(pageId==='notices'){renderNotices();}
+  if(pageId==='notice-write'){initNoticeWrite();}
 }
 
-function renderSidebar() {
-  const pages = currentRole==='admin' ? adminPages : userPages;
-  const nav = document.getElementById('sidebar-nav');
-  nav.innerHTML = pages.map(p => `
-    <button onclick="navigate('${p.id}')" class="nav-item w-full flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all ${currentPage===p.id?'active':''}" id="nav-${p.id}">
-      <span class="material-symbols-outlined">${p.icon}</span>
-      <span class="font-label-lg text-label-lg">${p.label}</span>
-    </button>
-  `).join('');
-}
-
-function navigate(pageId) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + pageId);
-  if (target) { target.classList.add('active'); currentPage = pageId; }
-  document.getElementById('main-content').scrollTop = 0;
-  renderSidebar();
-  if (pageId === 'admin-dashboard') renderParticipantsTable();
-  if (pageId === 'participants') renderParticipantsFull();
-  if (pageId === 'tasks') { renderTasksTable(); renderSubmissions(); }
-  if (pageId === 'notices') renderNoticesTable();
-  if (pageId === 'notice-write') initNoticeWrite();
-}
-
-// ==================== PARTICIPANTS ====================
-function renderParticipantsTable(filter) {
-  if (filter) currentParticipantFilter = filter;
-  let filtered = [...participants];
-  if (currentParticipantFilter === 'low-attendance') filtered = filtered.filter(p => p.attendance < 80);
-  if (currentParticipantFilter === 'old-counsel') filtered = filtered.filter(p => p.daysAgo > 7);
-
-  const tbody = document.getElementById('participants-tbody');
-  if (!tbody) return;
-  tbody.innerHTML = filtered.map(p => {
-    const attColor = p.attendance < 80 ? 'text-error' : 'text-primary';
-    const attBarColor = p.attendance < 80 ? 'bg-error' : 'bg-primary';
-    const counselText = p.daysAgo > 7 ? `<span class="text-error font-bold">${p.lastCounsel}<br/>(${p.daysAgo}일 경과)</span>` : `<span class="text-on-surface-variant">${p.lastCounsel}</span>`;
-    return `<tr class="hover:bg-surface-container transition-colors cursor-pointer border-l-4 border-l-transparent ${selectedParticipantId===p.id?'active-row':''}" onclick="selectParticipant(${p.id})">
-      <td class="p-sm"><div class="flex items-center gap-xs"><div class="w-8 h-8 rounded-full ${p.bgColor} ${p.textColor} flex items-center justify-center text-label-sm font-bold">${p.initials}</div><span class="font-label-lg">${p.name}</span></div></td>
-      <td class="p-sm text-body-md">${p.contact}</td>
-      <td class="p-sm text-body-md">${p.team} / ${p.cohort}</td>
-      <td class="p-sm"><div class="flex items-center gap-xs"><span class="${attColor} font-bold">${p.attendance}%</span><div class="w-12 h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="${attBarColor} h-full" style="width:${p.attendance}%"></div></div></div></td>
-      <td class="p-sm"><span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container/20 text-on-secondary-container text-label-sm font-bold">${p.tasks}</span></td>
-      <td class="p-sm text-label-sm">${counselText}</td>
+// ─── PARTICIPANTS TABLE ───────────────────────────────────
+function renderPTable(){
+  let list=pFilter==='low'?PARTICIPANTS.filter(p=>p.att<80):pFilter==='counsel'?PARTICIPANTS.filter(p=>p.days>7):[...PARTICIPANTS];
+  const tb=document.getElementById('ptable');
+  if(!tb)return;
+  tb.innerHTML=list.map(p=>{
+    const ac=p.att<80,cc=p.days>7;
+    return`<tr onclick="selectP(${p.id})" class="hover:bg-surface-container cursor-pointer border-l-4 border-l-transparent transition-colors ${selParticipant===p.id?'active-row':''}">
+      <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full ${p.bg} ${p.fg} flex items-center justify-center text-xs font-bold shrink-0">${p.ini}</div><span class="text-sm font-semibold">${p.name}</span></div></td>
+      <td class="px-4 py-3 text-sm hidden md:table-cell">${p.contact}</td>
+      <td class="px-4 py-3 text-sm">${p.team}/${p.cohort}</td>
+      <td class="px-4 py-3"><span class="${ac?'text-error':'text-primary'} font-bold text-sm">${p.att}%</span></td>
+      <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-secondary-container/20 text-on-secondary-container text-xs font-bold">${p.tasks}</span></td>
+      <td class="px-4 py-3 text-xs hidden lg:table-cell ${cc?'text-error font-bold':'text-on-surface-variant'}">${p.last}${cc?` <br/>(${p.days}일 경과)`:''}</td>
     </tr>`;
   }).join('');
-  document.getElementById('participants-count-text').textContent = `전체 ${participants.length}명 중 1-${filtered.length} 표시`;
+  document.getElementById('p-count-text').textContent=`전체 ${list.length}명`;
 }
-
-function filterParticipants(filter) {
-  currentParticipantFilter = filter;
-  renderParticipantsTable();
+function filterP(f){pFilter=f;renderPTable();}
+function selectP(id){
+  selParticipant=id;
+  renderPTable();
+  const p=PARTICIPANTS.find(x=>x.id===id);
+  if(!p)return;
+  document.getElementById('det-name').textContent=p.name+' 교육생';
+  document.getElementById('det-info').textContent=`${p.team} / ${p.cohort} / ${p.contact}`;
+  const b=[];
+  if(p.att<80)b.push('<span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">출석 위험</span>');
+  if(p.td>=p.tt)b.push('<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">과제 성실</span>');
+  if(p.days>7)b.push('<span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">상담 필요</span>');
+  if(b.length===0)b.push('<span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">정상</span>');
+  document.getElementById('det-badges').innerHTML=b.join('');
+  renderMemoList(id);
 }
-
-function selectParticipant(id) {
-  selectedParticipantId = id;
-  renderParticipantsTable();
-  const p = participants.find(x => x.id===id);
-  if (!p) return;
-  document.getElementById('detail-name').textContent = p.name + ' 교육생';
-  document.getElementById('detail-info').textContent = `${p.team} / ${p.cohort} / ${p.contact}`;
-  const badges = [];
-  if (p.attendance < 80) badges.push('<span class="px-sm py-1 bg-white/20 rounded-full text-label-sm font-bold">출석 위험</span>');
-  if (p.tasksDone >= p.tasksTotal) badges.push('<span class="px-sm py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-bold">과제 성실</span>');
-  if (p.daysAgo > 7) badges.push('<span class="px-sm py-1 bg-white/20 rounded-full text-label-sm font-bold">상담 필요</span>');
-  document.getElementById('detail-badges').innerHTML = badges.join('');
-  renderMemos(id);
+function renderMemoList(pid){
+  const list=MEMOS[pid]||[];
+  const el=document.getElementById('memo-list');
+  if(!el)return;
+  document.getElementById('memo-count').textContent=`총 ${list.length}건`;
+  const header=`<div class="flex items-center justify-between mb-2"><h5 class="text-sm font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">history_edu</span>상담 및 관리 이력</h5><span class="text-xs text-on-surface-variant" id="memo-count">총 ${list.length}건</span></div>`;
+  el.innerHTML=header+list.map(m=>`
+    <div class="bg-white border border-outline-variant p-3 rounded-lg space-y-1 card-shadow">
+      <div class="flex justify-between items-start"><span class="text-xs font-bold px-2 py-0.5 ${m.bg} ${m.fg} rounded">${m.type}</span><span class="text-xs text-on-surface-variant">${m.date}</span></div>
+      <p class="text-sm">${m.txt}</p>
+      <p class="text-xs text-on-surface-variant italic border-t border-outline-variant/30 pt-1">작성자: ${m.author}</p>
+    </div>`).join('');
 }
-
-function renderMemos(participantId) {
-  const list = memos[participantId] || [];
-  document.getElementById('memo-count').textContent = `총 ${list.length}건`;
-  document.getElementById('memo-list').innerHTML = list.map(m => `
-    <div class="bg-surface border border-outline-variant p-sm rounded-lg space-y-xs shadow-sm">
-      <div class="flex justify-between items-start">
-        <span class="text-label-sm font-bold px-2 py-0.5 ${m.typeBg} ${m.typeText} rounded">${m.type}</span>
-        <span class="text-label-sm text-on-surface-variant">${m.date}</span>
-      </div>
-      <p class="text-body-md">${m.content}</p>
-      <div class="pt-base border-t border-outline-variant/30 text-label-sm text-on-surface-variant italic">작성자: ${m.author}</div>
-    </div>
-  `).join('');
-}
-
-function saveMemo() {
-  const date = document.getElementById('memo-date').value;
-  const type = document.getElementById('memo-type').value;
-  const content = document.getElementById('memo-content').value.trim();
-  if (!content) { showToast('상담 내용을 입력하세요.'); return; }
-  if (!date) { showToast('상담 일자를 선택하세요.'); return; }
-  const typeMap = { '대면 상담': {bg:'bg-primary-fixed', text:'text-on-primary-fixed-variant'}, '유선 연락': {bg:'bg-surface-container-high', text:'text-on-surface-variant'}, '문자/카톡': {bg:'bg-secondary-fixed', text:'text-on-secondary-fixed-variant'}, '이메일': {bg:'bg-tertiary-fixed', text:'text-on-tertiary-fixed-variant'} };
-  const colors = typeMap[type] || { bg:'bg-surface-container-high', text:'text-on-surface-variant' };
-  if (!memos[selectedParticipantId]) memos[selectedParticipantId] = [];
-  memos[selectedParticipantId].unshift({ type, date: date + ' 저장됨', content, author:'현재 관리자', typeBg: colors.bg, typeText: colors.text });
-  document.getElementById('memo-content').value = '';
-  document.getElementById('memo-date').value = '';
-  renderMemos(selectedParticipantId);
+function saveMemo(){
+  const date=document.getElementById('memo-date').value;
+  const type=document.getElementById('memo-type').value;
+  const txt=document.getElementById('memo-text').value.trim();
+  if(!date){showToast('상담 일자를 선택하세요.');return;}
+  if(!txt){showToast('상담 내용을 입력하세요.');return;}
+  const bgs={대면상담:['bg-primary-fixed','text-on-primary-fixed-variant'],유선연락:['bg-surface-container-high','text-on-surface-variant'],문자카톡:['bg-secondary-fixed','text-on-secondary-fixed-variant'],이메일:['bg-tertiary-fixed','text-on-tertiary-fixed-variant']};
+  const key=type.replace(/[^가-힣]/g,'');
+  const [bg,fg]=bgs[key]||['bg-surface-container-high','text-on-surface-variant'];
+  if(!MEMOS[selParticipant])MEMOS[selParticipant]=[];
+  MEMOS[selParticipant].unshift({type,date:`${date} 저장됨`,txt,author:currentUser?.name||'관리자',bg,fg});
+  document.getElementById('memo-text').value='';
+  renderMemoList(selParticipant);
   showToast('메모가 저장되었습니다.');
 }
 
-function renderParticipantsFull(filterTeam, searchVal) {
-  let filtered = [...participants];
-  if (filterTeam) filtered = filtered.filter(p => p.team === filterTeam);
-  if (searchVal) filtered = filtered.filter(p => p.name.includes(searchVal) || p.contact.includes(searchVal));
-  const tbody = document.getElementById('participants-full-tbody');
-  if (!tbody) return;
-  tbody.innerHTML = filtered.map(p => {
-    const attColor = p.attendance < 80 ? 'text-error' : 'text-primary';
-    return `<tr class="hover:bg-surface-container transition-colors cursor-pointer">
-      <td class="p-sm"><div class="flex items-center gap-xs"><div class="w-8 h-8 rounded-full ${p.bgColor} ${p.textColor} flex items-center justify-center text-label-sm font-bold">${p.initials}</div><span class="font-label-lg">${p.name}</span></div></td>
-      <td class="p-sm text-body-md">${p.contact}</td>
-      <td class="p-sm text-body-md">${p.team} / ${p.cohort}</td>
-      <td class="p-sm"><span class="${attColor} font-bold">${p.attendance}%</span></td>
-      <td class="p-sm"><span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container/20 text-on-secondary-container text-label-sm font-bold">${p.tasks}</span></td>
-      <td class="p-sm"><span class="px-2 py-1 rounded-full text-label-sm font-bold ${p.status==='active'?'bg-secondary/10 text-secondary':'bg-surface-container text-on-surface-variant'}">${p.status==='active'?'진행 중':'수료'}</span></td>
-    </tr>`;
-  }).join('');
-  document.getElementById('participants-full-count').textContent = `전체 ${filtered.length}명`;
+// Full participants page
+function renderPFull(){
+  const search=(document.getElementById('psearch')?.value||'').toLowerCase();
+  const team=document.getElementById('pteam-filter')?.value||'';
+  let list=PARTICIPANTS.filter(p=>(!team||p.team===team)&&(!search||p.name.includes(search)||p.contact.includes(search)));
+  const tb=document.getElementById('ptable-full');
+  if(!tb)return;
+  tb.innerHTML=list.map(p=>`
+    <tr class="hover:bg-surface-container cursor-pointer transition-colors">
+      <td class="px-4 py-3"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full ${p.bg} ${p.fg} flex items-center justify-center text-xs font-bold shrink-0">${p.ini}</div><span class="text-sm font-semibold">${p.name}</span></div></td>
+      <td class="px-4 py-3 text-sm">${p.contact}</td>
+      <td class="px-4 py-3 text-sm">${p.team}/${p.cohort}</td>
+      <td class="px-4 py-3 text-sm font-bold ${p.att<80?'text-error':'text-primary'}">${p.att}%</td>
+      <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-secondary-container/20 text-on-secondary-container text-xs font-bold">${p.tasks}</span></td>
+      <td class="px-4 py-3"><span class="px-2 py-1 rounded-full text-xs font-bold bg-secondary/10 text-secondary">진행 중</span></td>
+    </tr>`).join('');
+  document.getElementById('pfull-count').textContent=`전체 ${list.length}명`;
 }
 
-function searchParticipants(val) { renderParticipantsFull(null, val); }
-function filterByTeam(val) { renderParticipantsFull(val || null, document.getElementById('participant-search')?.value || ''); }
-
-// ==================== TASKS ====================
-function renderTasksTable() {
-  let filtered = tasks;
-  const search = document.getElementById('task-search')?.value?.toLowerCase() || '';
-  if (currentTaskFilter !== 'all') filtered = filtered.filter(t => t.status === currentTaskFilter);
-  if (search) filtered = filtered.filter(t => t.name.toLowerCase().includes(search) || t.week.includes(search));
-
-  const tbody = document.getElementById('tasks-tbody');
-  if (!tbody) return;
-  tbody.innerHTML = filtered.map(t => {
-    const pct = Math.round(t.submitted/t.total*100);
-    let actionHtml = '';
-    if (t.status === 'closed') {
-      actionHtml = `<div class="flex justify-center gap-xs"><span class="px-sm py-1 bg-secondary/10 text-secondary rounded-full text-label-sm font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">check_circle</span>${t.approved} 승인</span><span class="px-sm py-1 bg-error/10 text-error rounded-full text-label-sm font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">cancel</span>${t.rejected} 반려</span></div>`;
-    } else if (t.submitted - t.approved - t.rejected > 0) {
-      const pending = t.submitted - t.approved - t.rejected;
-      actionHtml = `<div class="flex justify-center"><button onclick="filterPendingSubmissions(${t.id})" class="px-md py-1 bg-primary text-white rounded-lg text-label-sm font-bold hover:opacity-90 transition-colors">검토하기 (${pending})</button></div>`;
-    } else {
-      actionHtml = `<span class="text-label-sm text-on-surface-variant italic text-center block">접수 중</span>`;
-    }
-    return `<tr class="hover:bg-surface-container-low transition-colors">
-      <td class="px-md py-md text-body-md font-bold">${t.week}</td>
-      <td class="px-md py-md"><div class="flex flex-col"><span class="text-body-md font-bold">${t.name}</span><span class="text-label-sm text-on-surface-variant">${t.category}</span></div></td>
-      <td class="px-md py-md text-body-md">${t.dueDate}</td>
-      <td class="px-md py-md"><div class="flex items-center gap-sm"><span class="text-label-lg font-bold text-primary">${t.submitted} / ${t.total}</span><span class="text-label-sm text-on-surface-variant">(${pct}%)</span></div></td>
-      <td class="px-md py-md">${actionHtml}</td>
-      <td class="px-md py-md text-right"><button onclick="showToast('과제 관리 메뉴입니다.')" class="p-xs hover:bg-surface-variant rounded-lg transition-colors text-on-surface-variant"><span class="material-symbols-outlined">more_vert</span></button></td>
+// ─── TASKS ───────────────────────────────────────────────
+function renderTasks(){
+  const search=(document.getElementById('tsearch')?.value||'').toLowerCase();
+  let list=tFilter==='all'?TASKS:TASKS.filter(t=>t.status===tFilter);
+  if(search)list=list.filter(t=>t.name.toLowerCase().includes(search)||t.week.includes(search));
+  const tb=document.getElementById('ttable');
+  if(!tb)return;
+  tb.innerHTML=list.map(t=>{
+    const pct=Math.round(t.sub/t.tot*100);
+    let act='';
+    if(t.status==='closed')act=`<div class="flex justify-center gap-1"><span class="px-2 py-0.5 bg-secondary/10 text-secondary rounded-full text-xs font-bold">${t.appr} 승인</span><span class="px-2 py-0.5 bg-error/10 text-error rounded-full text-xs font-bold">${t.rej} 반려</span></div>`;
+    else if(t.sub-t.appr-t.rej>0)act=`<button onclick="showToast('검토 화면으로 이동합니다.')" class="px-3 py-1 bg-primary text-white rounded-lg text-xs font-bold hover:opacity-90">검토하기 (${t.sub-t.appr-t.rej})</button>`;
+    else act=`<span class="text-xs text-on-surface-variant italic">접수 중</span>`;
+    return`<tr class="hover:bg-surface-container-low transition-colors">
+      <td class="px-5 py-4 font-bold text-sm">${t.week}</td>
+      <td class="px-5 py-4"><p class="font-bold text-sm">${t.name}</p><p class="text-xs text-on-surface-variant">${t.cat}</p></td>
+      <td class="px-5 py-4 text-sm">${t.due}</td>
+      <td class="px-5 py-4 text-sm"><span class="font-bold text-primary">${t.sub}/${t.tot}</span> <span class="text-on-surface-variant text-xs">(${pct}%)</span></td>
+      <td class="px-5 py-4 text-center">${act}</td>
+      <td class="px-5 py-4 text-right"><button onclick="showToast('관리 메뉴')" class="p-1 hover:bg-surface-variant rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">more_vert</span></button></td>
     </tr>`;
   }).join('');
-  document.getElementById('tasks-count-text').textContent = `전체 ${filtered.length}개 과제`;
+  document.getElementById('t-count-text').textContent=`전체 ${list.length}개 과제`;
 }
-
-function filterTasks(filter) {
-  currentTaskFilter = filter;
-  ['all','active','closed'].forEach(f => {
-    const btn = document.getElementById('task-filter-' + f);
-    if (btn) btn.className = f===filter ? 'px-sm py-1 bg-surface-variant text-on-surface font-bold text-label-sm' : 'px-sm py-1 text-on-surface-variant text-label-sm hover:bg-surface-variant';
+function filterT(f){
+  tFilter=f;
+  ['all','active','closed'].forEach(x=>{
+    const b=document.getElementById('tf-'+x);
+    if(b)b.className='px-3 py-1.5 text-xs '+(x===f?'bg-surface-variant font-bold':'text-on-surface-variant hover:bg-surface-variant');
   });
-  renderTasksTable();
+  renderTasks();
 }
-
-function searchTasks(val) { renderTasksTable(); }
-
-function renderSubmissions() {
-  const list = document.getElementById('submissions-list');
-  const badge = document.getElementById('submissions-badge');
-  const pendingCount = document.getElementById('pending-count');
-  if (!list) return;
-  if (activeSubmissions.length === 0) {
-    list.innerHTML = '<div class="p-xl text-center text-on-surface-variant"><span class="material-symbols-outlined text-[48px] block mb-sm">task_alt</span><p class="font-label-lg">처리 대기 중인 제출물이 없습니다.</p></div>';
-    if (badge) badge.textContent = '0건 대기';
-    if (pendingCount) pendingCount.textContent = '0';
+function addTask(){
+  const week=document.getElementById('nt-week')?.value?.trim();
+  const name=document.getElementById('nt-name')?.value?.trim();
+  const due=document.getElementById('nt-due')?.value;
+  if(!week||!name){showToast('주차와 과제명을 입력하세요.');return;}
+  TASKS.push({id:TASKS.length+1,week,name,cat:'신규',due:due||'진행중',sub:0,tot:128,appr:0,rej:0,status:'active'});
+  closeModal('modal-new-task');
+  ['nt-week','nt-name','nt-due'].forEach(x=>{const el=document.getElementById(x);if(el)el.value='';});
+  showToast('과제가 등록되었습니다.');
+  if(currentPage==='tasks')renderTasks();
+}
+function renderSubs(){
+  const el=document.getElementById('sub-list');
+  const badge=document.getElementById('sub-badge');
+  const cnt=document.getElementById('pending-cnt');
+  if(!el)return;
+  if(cnt)cnt.textContent=String(SUBS.length);
+  if(badge)badge.textContent=`${SUBS.length}건 대기`;
+  if(SUBS.length===0){
+    el.innerHTML='<div class="p-12 text-center text-on-surface-variant"><span class="material-symbols-outlined text-5xl block mb-3">task_alt</span><p class="text-sm font-semibold">처리 대기 중인 제출물이 없습니다.</p></div>';
     return;
   }
-  if (badge) badge.textContent = `${activeSubmissions.length}건 대기`;
-  if (pendingCount) pendingCount.textContent = String(activeSubmissions.length);
-  list.innerHTML = activeSubmissions.map(s => `
-    <div class="p-md hover:bg-surface-container-low transition-all flex flex-col md:flex-row justify-between gap-md" id="submission-${s.id}">
-      <div class="flex gap-md">
-        <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary">description</span></div>
+  el.innerHTML=SUBS.map(s=>`
+    <div class="p-4 hover:bg-surface-container-low transition-all flex flex-wrap justify-between gap-4" id="sub-${s.id}">
+      <div class="flex gap-3">
+        <div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary">description</span></div>
         <div>
-          <h5 class="text-body-md font-bold text-on-surface">${s.filename}</h5>
-          <p class="text-label-sm text-on-surface-variant">제출자: ${s.submitter} (${s.team}) | ${s.date}</p>
-          <div class="mt-xs flex items-center gap-sm">
-            <button onclick="showToast('${s.filename} 다운로드 (${s.size})')" class="text-primary text-label-sm font-bold flex items-center gap-xs hover:underline"><span class="material-symbols-outlined text-[16px]">download</span>다운로드 (${s.size})</button>
-          </div>
+          <p class="font-bold text-sm">${s.file}</p>
+          <p class="text-xs text-on-surface-variant">제출자: ${s.submitter} (${s.team}) | ${s.date}</p>
+          <button onclick="showToast('${s.file} 다운로드 (${s.size})')" class="text-primary text-xs font-bold flex items-center gap-1 hover:underline mt-1"><span class="material-symbols-outlined text-[14px]">download</span>다운로드 (${s.size})</button>
         </div>
       </div>
-      <div class="flex items-center gap-sm self-end md:self-center">
-        <button onclick="processSubmission(${s.id}, 'approve')" class="px-md py-sm bg-secondary text-white rounded-lg text-label-sm font-bold flex items-center gap-xs hover:opacity-90 transition-all"><span class="material-symbols-outlined text-[18px]">check</span>승인</button>
-        <button onclick="processSubmission(${s.id}, 'reject')" class="px-md py-sm border border-error text-error rounded-lg text-label-sm font-bold flex items-center gap-xs hover:bg-error/5 transition-all"><span class="material-symbols-outlined text-[18px]">close</span>반려</button>
+      <div class="flex items-center gap-2 self-end">
+        <button onclick="processSub(${s.id},'approve')" class="px-3 py-1.5 bg-secondary text-white rounded-lg text-xs font-bold flex items-center gap-1 hover:opacity-90"><span class="material-symbols-outlined text-[16px]">check</span>승인</button>
+        <button onclick="processSub(${s.id},'reject')" class="px-3 py-1.5 border border-error text-error rounded-lg text-xs font-bold flex items-center gap-1 hover:bg-error/5"><span class="material-symbols-outlined text-[16px]">close</span>반려</button>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
+}
+function processSub(id,action){
+  const el=document.getElementById('sub-'+id);
+  if(el){el.style.opacity='.4';el.style.pointerEvents='none';}
+  setTimeout(()=>{
+    SUBS=SUBS.filter(s=>s.id!==id);
+    showToast(action==='approve'?'제출물이 승인되었습니다.':'제출물이 반려되었습니다.');
+    renderSubs();
+  },350);
 }
 
-function processSubmission(id, action) {
-  const el = document.getElementById('submission-' + id);
-  if (el) { el.style.opacity = '0.4'; el.style.pointerEvents = 'none'; }
-  setTimeout(() => {
-    activeSubmissions = activeSubmissions.filter(s => s.id !== id);
-    const label = action === 'approve' ? '승인' : '반려';
-    showToast(`제출물이 ${label} 처리되었습니다.`);
-    renderSubmissions();
-  }, 400);
-}
-
-function filterPendingSubmissions(taskId) {
-  showToast(`${taskId}주차 제출물을 검토합니다.`);
-}
-
-function addNewTask() {
-  const week = document.getElementById('new-task-week')?.value?.trim();
-  const name = document.getElementById('new-task-name')?.value?.trim();
-  const due = document.getElementById('new-task-due')?.value;
-  if (!week || !name) { showToast('주차와 과제명을 입력하세요.'); return; }
-  tasks.push({ id: tasks.length+1, week, name, category:'신규 과제', dueDate: due||'진행중', submitted:0, total:128, approved:0, rejected:0, status:'active' });
-  closeModal('new-task-modal');
-  document.getElementById('new-task-week').value = '';
-  document.getElementById('new-task-name').value = '';
-  document.getElementById('new-task-due').value = '';
-  showToast('신규 과제가 등록되었습니다.');
-  if (currentPage === 'tasks') renderTasksTable();
-}
-
-function exportExcel() { showToast('엑셀 파일 다운로드를 시작합니다.'); }
-
-// ==================== NOTICES ====================
-function renderNoticesTable() {
-  let filtered = [...notices];
-  if (currentNoticeFilter) filtered = filtered.filter(n => n.category === currentNoticeFilter || (currentNoticeFilter === '' ? true : false));
-  if (currentNoticeSearch) filtered = filtered.filter(n => n.title.toLowerCase().includes(currentNoticeSearch.toLowerCase()));
-
-  const pinned = filtered.filter(n => n.pinned);
-  const regular = filtered.filter(n => !n.pinned);
-  const tbody = document.getElementById('notices-tbody');
-  if (!tbody) return;
-
-  const renderRow = (n, idx) => {
-    const noCell = n.pinned ? `<span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings:'FILL' 1">push_pin</span>` : String(idx+1);
-    const importantBadge = n.important ? `<span class="bg-error text-on-error text-[10px] px-xs py-0.5 rounded font-bold uppercase">Important</span>` : '';
-    const catBadge = n.category ? `<span class="bg-surface-variant text-on-surface-variant text-[10px] px-xs py-0.5 rounded font-bold">${n.category}</span>` : '';
-    const newDot = n.isNew ? `<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>` : '';
-    const attach = n.hasAttachment ? `<span class="material-symbols-outlined text-secondary text-[16px]">attach_file</span>` : '';
-    const rowBg = n.pinned ? 'bg-error-container/10' : '';
-    return `<tr class="notice-row ${rowBg} group">
-      <td class="py-md px-md text-center font-label-sm text-on-surface-variant">${noCell}</td>
-      <td class="py-md px-md"><div class="flex items-center gap-xs">${importantBadge}${catBadge}<button onclick="showToast('공지사항: ${n.title.substring(0,20)}...')" class="font-label-lg text-on-surface hover:text-primary hover:underline transition-all text-left">${n.title}</button>${newDot}${attach}</div></td>
-      <td class="py-md px-md text-center font-label-sm text-on-surface-variant">${n.date}</td>
-      <td class="py-md px-md text-center font-label-sm text-on-surface-variant">${n.views.toLocaleString()}</td>
-      <td class="py-md px-md text-center"><button onclick="showToast('관리 메뉴입니다.')" class="material-symbols-outlined text-outline hover:text-primary cursor-pointer">more_vert</button></td>
+// ─── NOTICES ─────────────────────────────────────────────
+function renderNotices(){
+  const search=(document.getElementById('nsearch')?.value||'').toLowerCase();
+  let list=currentNcat?NOTICES.filter(n=>n.cat===currentNcat):[...NOTICES];
+  if(search)list=list.filter(n=>n.title.toLowerCase().includes(search));
+  const pinned=list.filter(n=>n.pin), regular=list.filter(n=>!n.pin);
+  const tb=document.getElementById('ntable');
+  if(!tb)return;
+  const row=(n,i)=>{
+    const noCell=n.pin?`<span class="material-symbols-outlined text-error text-[18px]" style="font-variation-settings:'FILL' 1">push_pin</span>`:String(i+1);
+    const impBadge=n.imp?`<span class="bg-error text-white text-[9px] px-1.5 py-0.5 rounded font-bold">Important</span>`:'';
+    const catBadge=n.cat?`<span class="bg-surface-variant text-on-surface-variant text-[9px] px-1.5 py-0.5 rounded font-bold">${n.cat}</span>`:'';
+    const newDot=n.isNew?`<span class="w-1.5 h-1.5 bg-secondary rounded-full inline-block"></span>`:'';
+    const attIcon=n.att?`<span class="material-symbols-outlined text-secondary text-[14px]">attach_file</span>`:'';
+    return`<tr class="notice-row ${n.pin?'bg-error-container/10':''}">
+      <td class="py-3 px-4 text-center text-xs text-on-surface-variant">${noCell}</td>
+      <td class="py-3 px-4"><div class="flex items-center gap-1.5">${impBadge}${catBadge}<button onclick="showToast('공지: ${n.title.substring(0,20)}...')" class="text-sm text-on-surface hover:text-primary hover:underline text-left">${n.title}</button>${newDot}${attIcon}</div></td>
+      <td class="py-3 px-4 text-center text-xs text-on-surface-variant">${n.date}</td>
+      <td class="py-3 px-4 text-center text-xs text-on-surface-variant">${n.views.toLocaleString()}</td>
+      <td class="py-3 px-4 text-center"><button onclick="showToast('관리 메뉴')" class="material-symbols-outlined text-outline hover:text-primary text-[18px]">more_vert</button></td>
     </tr>`;
   };
-
-  tbody.innerHTML = [...pinned.map((n,i) => renderRow(n,i)), ...regular.map((n,i) => renderRow(n,i))].join('');
-  document.getElementById('notices-count-text').textContent = `전체 ${filtered.length}건`;
-  document.getElementById('notices-total-count').textContent = `${notices.length} 건`;
+  tb.innerHTML=[...pinned.map((n,i)=>row(n,i)),...regular.map((n,i)=>row(n,i))].join('');
+  document.getElementById('n-count-text').textContent=`전체 ${list.length}건`;
+  document.getElementById('n-total').textContent=String(NOTICES.length);
 }
-
-function filterNotices(cat) {
-  currentNoticeFilter = cat;
-  document.querySelectorAll('#notice-category-btns button').forEach(btn => {
-    btn.className = 'px-sm py-xs rounded-full text-label-sm ' + (btn.textContent.trim() === getCategoryLabel(cat) || (cat==='' && btn.textContent.trim()==='전체') ? 'bg-primary-container text-on-primary-container font-bold' : 'hover:bg-surface-container text-on-surface-variant');
+function filterN(cat){
+  currentNcat=cat;
+  document.querySelectorAll('.n-cat').forEach(b=>{
+    const isCur=(cat===''&&b.textContent.trim()==='전체')||(b.textContent.trim()===cat);
+    b.className='n-cat px-3 py-1.5 rounded-full text-xs '+(isCur?'on bg-primary-container text-on-primary-container font-bold':'hover:bg-surface-container text-on-surface-variant');
   });
-  renderNoticesTable();
+  renderNotices();
 }
 
-function getCategoryLabel(cat) {
-  const m = {'':'전체','EVENT':'행사','ADMIN':'관리','CAREER':'취업/채용','SCHOLARSHIP':'장학'};
-  return m[cat] || cat;
+// ─── NOTICE WRITE ─────────────────────────────────────────
+function initNoticeWrite(){
+  const drop=document.getElementById('nw-drop');
+  const fi=document.getElementById('nw-file');
+  if(!drop||drop._init)return;
+  drop._init=true;
+  drop.addEventListener('click',()=>fi.click());
+  drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('drag-active');});
+  drop.addEventListener('dragleave',()=>drop.classList.remove('drag-active'));
+  drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('drag-active');handleFiles(e.dataTransfer.files,'nw-files');});
+  fi.addEventListener('change',()=>handleFiles(fi.files,'nw-files'));
 }
-
-function searchNotices(val) { currentNoticeSearch = val; renderNoticesTable(); }
-
-// ==================== NOTICE WRITE ====================
-function initNoticeWrite() {
-  const dropzone = document.getElementById('notice-dropzone');
-  const fileInput = document.getElementById('notice-file-input');
-  if (!dropzone || dropzone._initialized) return;
-  dropzone._initialized = true;
-  dropzone.addEventListener('click', () => fileInput.click());
-  dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('drag-zone-active'); });
-  dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-zone-active'));
-  dropzone.addEventListener('drop', e => { e.preventDefault(); dropzone.classList.remove('drag-zone-active'); handleNoticeFiles(e.dataTransfer.files); });
-  fileInput.addEventListener('change', () => handleNoticeFiles(fileInput.files));
-
-  const body = document.getElementById('notice-body');
-  if (body) {
-    body.addEventListener('focus', () => { if (!body.textContent) body.innerHTML = ''; });
-    body.addEventListener('input', () => {
-      if (!body.textContent.trim()) body.innerHTML = '';
-    });
-  }
-}
-
-function handleNoticeFiles(files) {
-  const list = document.getElementById('notice-file-list');
-  Array.from(files).forEach(file => {
-    const item = document.createElement('div');
-    item.className = "flex items-center justify-between p-sm bg-white border border-outline-variant rounded-lg shadow-sm";
-    item.innerHTML = `<div class="flex items-center gap-sm"><span class="material-symbols-outlined text-on-surface-variant">description</span><div><p class="text-label-lg font-bold text-on-surface">${file.name}</p><p class="text-label-sm text-on-surface-variant">${(file.size/1024/1024).toFixed(2)} MB</p></div></div><button type="button" onclick="this.parentElement.remove()" class="p-xs text-error hover:bg-error-container rounded-full transition-colors"><span class="material-symbols-outlined">delete</span></button>`;
-    list.appendChild(item);
+function handleFiles(files,listId){
+  const list=document.getElementById(listId);
+  Array.from(files).forEach(f=>{
+    const d=document.createElement('div');
+    d.className='flex items-center justify-between p-3 bg-white border border-outline-variant rounded-xl text-sm';
+    d.innerHTML=`<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">description</span><div><p class="font-bold">${f.name}</p><p class="text-xs text-on-surface-variant">${(f.size/1024/1024).toFixed(2)} MB</p></div></div><button type="button" onclick="this.parentElement.remove()" class="p-1 text-error hover:bg-error-container rounded-full"><span class="material-symbols-outlined text-[18px]">delete</span></button>`;
+    list.appendChild(d);
   });
 }
-
-function formatText(cmd) {
-  const body = document.getElementById('notice-body');
-  if (body) { body.focus(); document.execCommand(cmd, false, null); }
+function insertLink(){
+  const url=prompt('링크 URL:','https://');
+  if(url){document.getElementById('nw-body').focus();document.execCommand('createLink',false,url);}
 }
-
-function insertLink() {
-  const url = prompt('링크 URL을 입력하세요:', 'https://');
-  if (url) { document.getElementById('notice-body').focus(); document.execCommand('createLink', false, url); }
-}
-
-function publishNotice() {
-  const title = document.getElementById('notice-title')?.value?.trim();
-  if (!title) { showToast('제목을 입력하세요.'); return; }
-  const cat = document.getElementById('notice-category')?.value || '';
-  const pinned = document.getElementById('notice-pinned')?.checked || false;
-  const today = new Date();
-  const dateStr = `${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
-  const newNotice = { id: Date.now(), pinned, important: pinned, title, date: dateStr, views:0, category: cat, isNew: true };
-  if (pinned) notices.unshift(newNotice); else notices.push(newNotice);
+function publishNotice(){
+  const title=document.getElementById('nw-title')?.value?.trim();
+  if(!title){showToast('제목을 입력하세요.');return;}
+  const cat=document.getElementById('nw-cat')?.value||'';
+  const pin=document.getElementById('nw-pin')?.checked||false;
+  const today=new Date();
+  const d=`${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
+  NOTICES[pin?'unshift':'push']({id:Date.now(),pin,imp:pin,title,date:d,views:0,cat,isNew:true});
   showToast('공지사항이 발행되었습니다.');
-  setTimeout(() => navigate('notices'), 800);
+  setTimeout(()=>navigate('notices'),700);
 }
+function saveDraft(){showToast('임시 저장되었습니다.');}
 
-function saveDraft() { showToast('임시 저장되었습니다.'); }
-
-// ==================== UPLOAD MODAL ====================
-function submitTask() {
-  const files = document.getElementById('modal-file-list');
+// ─── UPLOAD MODAL ────────────────────────────────────────
+(()=>{
+  const drop=document.getElementById('up-drop');
+  const fi=document.getElementById('up-file');
+  if(!drop||!fi)return;
+  drop.addEventListener('click',()=>fi.click());
+  drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('drag-active');});
+  drop.addEventListener('dragleave',()=>drop.classList.remove('drag-active'));
+  drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('drag-active');handleFiles(e.dataTransfer.files,'up-files');});
+  fi.addEventListener('change',()=>handleFiles(fi.files,'up-files'));
+})();
+function doSubmitTask(){
   showToast('과제가 성공적으로 제출되었습니다!');
-  files.innerHTML = '';
-  closeModal('upload-modal');
+  document.getElementById('up-files').innerHTML='';
+  closeModal('modal-upload');
 }
 
-const modalDropzone = document.getElementById('modal-dropzone');
-const modalFileInput = document.getElementById('modal-file-input');
-if (modalDropzone && modalFileInput) {
-  modalDropzone.addEventListener('click', () => modalFileInput.click());
-  modalDropzone.addEventListener('dragover', e => { e.preventDefault(); modalDropzone.style.backgroundColor = '#d7e2ff'; });
-  modalDropzone.addEventListener('dragleave', () => { modalDropzone.style.backgroundColor = '#E8F1FA'; });
-  modalDropzone.addEventListener('drop', e => { e.preventDefault(); modalDropzone.style.backgroundColor = '#E8F1FA'; handleModalFiles(e.dataTransfer.files); });
-  modalFileInput.addEventListener('change', () => handleModalFiles(modalFileInput.files));
-}
-
-function handleModalFiles(files) {
-  const list = document.getElementById('modal-file-list');
-  Array.from(files).forEach(file => {
-    const item = document.createElement('div');
-    item.className = "flex items-center justify-between p-sm bg-surface-container-low border border-outline-variant rounded-lg";
-    item.innerHTML = `<div class="flex items-center gap-sm"><span class="material-symbols-outlined text-primary">description</span><span class="text-label-lg font-bold">${file.name}</span></div><button type="button" onclick="this.parentElement.remove()" class="p-xs text-error hover:bg-error-container rounded-full"><span class="material-symbols-outlined">delete</span></button>`;
-    list.appendChild(item);
-  });
-}
-
-// ==================== MODAL UTILS ====================
-function openModal(id) {
-  const el = document.getElementById(id);
-  if (el) { el.style.display = 'flex'; }
-}
-function closeModal(id) {
-  const el = document.getElementById(id);
-  if (el) { el.style.display = 'none'; }
-}
-document.addEventListener('click', e => {
-  ['upload-modal','new-task-modal'].forEach(id => {
-    const modal = document.getElementById(id);
-    if (modal && e.target === modal) closeModal(id);
-  });
+// ─── GLOBAL SEARCH ───────────────────────────────────────
+document.getElementById('global-search').addEventListener('input',function(){
+  const q=this.value.trim();
+  if(!q)return;
+  if(currentPage==='notices'){const ns=document.getElementById('nsearch');if(ns){ns.value=q;filterN(currentNcat);}}
+  if(currentPage==='participants'){const ps=document.getElementById('psearch');if(ps){ps.value=q;renderPFull();}}
+  if(currentPage==='tasks'){const ts=document.getElementById('tsearch');if(ts){ts.value=q;renderTasks();}}
 });
 
-// ==================== TOAST ====================
-let toastTimer;
-function showToast(msg) {
-  const toast = document.getElementById('toast');
-  const msgEl = document.getElementById('toast-msg');
-  msgEl.textContent = msg;
-  toast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
-}
-
-// ==================== GLOBAL SEARCH ====================
-document.getElementById('global-search').addEventListener('input', function() {
-  const q = this.value.trim();
-  if (!q) return;
-  if (currentPage === 'notices') { document.getElementById('notice-search').value = q; searchNotices(q); }
-  else if (currentPage === 'participants') { document.getElementById('participant-search') && (document.getElementById('participant-search').value = q); searchParticipants(q); }
-  else if (currentPage === 'tasks') { document.getElementById('task-search') && (document.getElementById('task-search').value = q); searchTasks(q); }
-});
-
-// ==================== INIT ====================
-renderParticipantsTable();
-renderSidebar();
-selectParticipant(1);
-
+// ─── INIT ─────────────────────────────────────────────────
 // Set today as default memo date
-const memoDateInput = document.getElementById('memo-date');
-if (memoDateInput) {
-  const today = new Date();
-  memoDateInput.value = today.toISOString().split('T')[0];
-}
+const md=document.getElementById('memo-date');
+if(md){const d=new Date();md.value=d.toISOString().split('T')[0];}
+// Login on Enter key
+['login-id','login-pw'].forEach(id=>{
+  document.getElementById(id)?.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+});
 </script>
 </body>
 </html>
